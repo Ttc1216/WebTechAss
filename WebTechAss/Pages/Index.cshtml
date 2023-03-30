@@ -4,7 +4,157 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="container">
+<head>
+	<meta charsetv="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Website With Login & Registration | Codehal</title>
+<link rel="stylesheet" href="~/css/StyleSheet.css"/>
+
+</head>
+
+<body>
+  <header>
+	 <h2 class="logo">Autism</h2>
+	 <nav class="navigation">
+		<a href="#">HOME</a>
+	 <a href="#">ABOUT</a>
+	 <a href="#">PARTNERSHIP</a>
+	 <a href="#">BLOG</a>
+	 <a href="#">FAQ</a>
+	 <a href="#">RESOURCE</a>
+	 <button class="btnlogin-popup">Login</button>
+	 </nav>
+  </header>
+
+  <br>
+	<br>
+	 <br>
+	  <br>
+	   <div class="wrapper">
+		   <span class="icon-close"><ion-icon name="close-outline"></ion-icon>
+		   </span>
+	     <div class="form-box login">
+		   <h2>Login</h2>
+			  <form action="#">
+				<div class="input-box">
+					<span class="icon"><ion-icon name="mail"></ion-icon></span>
+					<input type="email" required />
+					<label>Email</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+					<input type="password" required />
+					<label>Password</label>
+				</div>
+				<div class="remember-forgot">
+					<label><input type="checkbox" />Remember me</label>
+					<a href="#">Forgot Password</a>
+				</div>
+				 <br>
+				  <button type="submit" class="btn">Login</button>
+				 <br />
+				  <div class="login-register">
+					<p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+				  </div>
+			  </form>
+		 </div>
+
+		 <div class="form-box register">
+		   <h2>Registration</h2>
+			  <form action="#">
+				<div class="input-box">
+					<span class="icon"><ion-icon name="person"></ion-icon></span>
+					<input type="text" required />
+					<label>Username</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><ion-icon name="mail"></ion-icon></span>
+					<input type="email" required />
+					<label>Email</label>
+				</div>
+				<div class="input-box">
+					<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+					<input type="password" required />
+					<label>Password</label>
+				</div>
+				<div class="remember-forgot">
+					<label><input type="checkbox" />I agree to the terms & condition</label>	
+				</div>
+				 <br>
+				  <button type="submit" class="btn">Register</button>
+				 <br />
+				  <div class="login-register">
+					<p>Already have an account? <a href="#" class="login-link">Login</a></p>
+				  </div>
+			  </form>
+		 </div>
+	   </div>
+	   <br />
+	 </br>
+   </br>
+ </br>
+
+    <script src = "~/js/site.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+	@*login pages <title>Login Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url("../images/bg.jpg");
+			background-size: cover;
+		}
+		form {
+			width: 400px;
+			margin: 0 auto;
+		}
+		input[type=text], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			border-radius: 4px;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		.container {
+			padding: 16px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div class="container">
+			<label for="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="username" required>
+
+			<label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+
+			<button type="submit">Login</button>
+		</div>
+	</form>
+</body>
+
+
+@*<div class="container">
     <form action="/action_page.php">
         <div class="row">
             <h2 style="text-align:center">Welcome</h2>
@@ -55,3 +205,4 @@
                     <p>Go to our<a href="https://www.instagram.com/">Instagram</a>.</p>
 
 
+*@

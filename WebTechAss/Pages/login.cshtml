@@ -1,0 +1,59 @@
+﻿@page
+@model WebTechAss.Pages.Index1Model
+@{
+}
+
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url("../images/bg.jpg");
+			background-size: cover;
+		}
+		form {
+			width: 400px;
+			margin: 0 auto;
+		}
+		input[type=text], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			border-radius: 4px;
+		}
+		button:hover {
+			background-color: #45a049;
+		}
+		.container {
+			padding: 16px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div class="container">
+			<label for="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="username" required>
+
+			<label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+
+			<button type="submit">Login</button>
+		</div>
+	</form>
+</body>
+
+
