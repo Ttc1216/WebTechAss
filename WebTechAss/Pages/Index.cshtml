@@ -11,10 +11,58 @@
 <title>Website With Login & Registration | Codehal</title>
 <link rel="stylesheet" href="~/css/StyleSheet.css"/>
 
+<style>
+body {
+			font-family: Arial, 'Times New Roman';
+			text-align: center;
+			background-image: url('../images/homw1.jpg');
+			background-color: rgba(0, 0, 0, 0.5);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		h1 {
+			color: darkblue;
+			font-size: 60px;
+			margin-top: 50px;
+		}
+		p {
+			color:brown;
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		button {
+			background-color: #336699;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			margin-top: 30px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		button:hover {
+			background-color: #25457c;
+		}
+	</style>
 </head>
 
 <body>
- 
+    <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
+	<br>
+	<br>
+	<br>
+      <h2><b>Welcome to <span>AutismSave</span></b></h2>
+      <p>The world sees obstacles where we see possibilities.</p>
+      <div class="d-flex">
+		<button onclick="window.location.href = 'About.html'"> Get Started </button>&nbsp;&nbsp;&nbsp;
+
+		<button onclick="location.href = 'https://youtu.be/LfOcTVu6pcU';"> Watch video </button>
+      </div>
+    </div>	
+  </section>
 	@* <nav class="navigation">
 		<a href="#">HOME</a>
 	 <a href="#">ABOUT</a>

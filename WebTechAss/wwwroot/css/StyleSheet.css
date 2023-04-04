@@ -4,16 +4,15 @@
     font-family:'Poppins', sans-serif;
 }
 
-body {
+/*body {
     display: flex;
     justify-content: center;
     align-content: center;
     min-height: 50vh;
-    background: #ffffff;
+    background: #ffffff;*/
     /*background: url('../images/bg.jpg') no-repeat;*/
-    background-size: cover;
-    background-position: center;
-}
+    /*background-position: center;
+}*/
 
 form {
     border: none;
@@ -24,8 +23,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px 50px;*/
+    width: 200%;
+    padding: 10px 80px;
     /*    background: black;*/
     display: flex;
     justify-content: space-between;
@@ -119,6 +118,134 @@ header {
         transform: translateX(5px);
 }
 
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.section-header h2 {
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        margin: 0;
+        color: #4154f1;
+        text-transform: uppercase;
+}
+
+.ourwork .content {
+    background-color: #f6f9ff;
+    padding: 40px;
+}
+.ourwork h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4154f1;
+    text-transform: uppercase;
+}
+
+.ourwork h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #012970;
+}
+
+.ourwork p {
+    margin: 15px 0 30px 0;
+    line-height: 24px;
+}
+.ourwork img {
+    width: 340px;
+    height: 200px;
+
+}
+/* Define the grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    background-color:darkslateblue;
+}
+
+
+/* Style the sections */
+.section {
+    background-color: #f9f9f9;
+    padding: 50px;
+}
+
+    /* Style the section headers */
+    .section h2 {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    /* Style the section content */
+    .section p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+/* Set up the grid areas for each section */
+.section1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.section2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+
+/* Center the content in every section */
+.section > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+/*gpt main {
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.challenge {
+    background-color: #f6f9ff;
+    padding: 20px;
+}
+
+.familiar {
+    background-color: #f6f9ff;
+    padding: 20px;
+}
+
+.service-label {
+    background-color: #f6f9ff;
+    padding: 20px;
+}*/
 /*body {
     margin: 0;
 }

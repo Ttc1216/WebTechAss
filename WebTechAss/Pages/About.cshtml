@@ -6,33 +6,195 @@
 @Model.Name
 <section id="about" class="about">
 
-      <div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
         <div class="row gx-0">
 
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="content">
-              <h3>Who We Are</h3>
-              <h2>For 10 years and counting, the Autism Society, including our nationwide network of affiliates, connects people to the resources 
-                  they need through education, advocacy, support, information and referral, and community programming.</h2>
-              <p>
-               Our mission is to support and empower families affected by autism spectrum disorders. 
-               We work to identify services and activities specfic to their needs. Our goal is to provide 
-               a sense of inclusion and opportunity for those families within the local community and the ASD community. 
-              </p>
-              <div class="text-center text-lg-start">
-                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
-                  <span>Read More</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="content">
+                    <h3>Who We Are</h3>
+                    <h2>
+                        For 10 years and counting, the Autism Society, including our nationwide network of affiliates, connects people to the resources
+                        they need through education, advocacy, support, information and referral, and community programming.
+                    </h2>
+                    <p>
+                        Our mission is to support and empower families affected by autism spectrum disorders.
+                        We work to identify services and activities specfic to their needs. Our goal is to provide
+                        a sense of inclusion and opportunity for those families within the local community and the ASD community.
+                    </p>
+                    <div class="text-center text-lg-start">
+                        <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                            <span>Read More</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="~/images/who we are.png" class="img-fluid" alt="">
-          </div>
+            <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                <img src="~/images/who we are.png" class="img-fluid" alt="">
+            </div>
 
         </div>
-      </div>
+    </div>
+    @*<div id="acout-2">
+            <div class="content-box-lg">
+                <div class="container">
+                    <div class="col-lg-4">
+                        <div class="align-items-center">
+                            <h3>Mission</h3>
+                            <hr>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    <style>
+        .container .mission, .vision {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+        }
 
-    </section><!-- End About Section -->
+        .mission, .vision {
+            margin-bottom: 30px;
+        }
+
+            .mission h2, .vision h2 {
+                color: #012970;
+                font-size: 30px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+
+            .mission p, .vision p {
+                color: black;
+                font-size: 20px;
+                font-style: italic;
+            }
+    </style>
+
+    <div class="container">
+        <div class="mission">
+            <h2>Mission</h2>
+            <p>To provide innovative solutions that empower people and organizations to achieve their goals and make a positive impact in the world.</p>
+        </div>
+
+        <div class="vision">
+            <h2>Vision</h2>
+            <p>To be the leading provider of transformative technology solutions that drive progress and inspire positive change.</p>
+        </div>
+    </div>
+
+</section><!-- End About Section -->
+
+ 
+<section id="ourwork" class="ourwork">
+    @*<div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+            <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+    <div class="content">
+                    <h3>Our Work</h3>
+                    <h2>
+                        Autism In Malaysia
+                    </h2>
+                    <p>
+                        Our mission is to support and empower families affected by autism spectrum disorders.
+                        We work to identify services and activities specfic to their needs. Our goal is to provide
+                        a sense of inclusion and opportunity for those families within the local community and the ASD community.
+                    </p>
+            </div>
+            <div class="content">
+                    <h2>
+                        Challenges in ASD
+                    </h2>
+                    <p>
+                        Our mission is to support and empower families affected by autism spectrum disorders.
+                        We work to identify services and activities specfic to their needs. Our goal is to provide
+                        a sense of inclusion and opportunity for those families within the local community and the ASD community.
+                    </p>
+            </div>
+    </div>*@
+
+  <body>
+      <h2>Our Work</h2>
+    <div class="grid">
+      <div class="section section1">
+        <h2>Autism in Malaysia</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget est eu magna malesuada finibus. Fusce efficitur, turpis quis eleifend pulvinar, sapien tortor gravida nunc, vel malesuada ipsum felis eu urna.</p>
+        <button style="background-color: #4154f1 ; border: none; padding: 15px; color: #ffffff";>
+          <a href="./5649-15825-1-SM.pdf">Read more</a>
+        </button>
+      </div>
+      <div class="section section2">
+        <h2>Challenges in ASD</h2>
+        <p>Challenges that individuals with ASD may face include difficulties in:</p>
+        <ul>
+         <li>Social communication: People with ASD may struggle with verbal and nonverbal communication. </li>
+         <li>Social interaction: Individuals with ASD may have difficulty forming and maintaining relationships</li>
+         <li>Sensory processing: People with ASD may be overly sensitive or under-sensitive to sensory stimuli <br />such as sound, touch, taste, and smell.</li>
+       </ul>  
+      </div>
+      </div>
+      <br />
+      <br />
+       <h2>Families and Caregivers</h2>
+      <div class="content">
+                    <h2>
+                        Autism families and caregivers play a critical role in supporting individuals with Autism Spectrum Disorder (ASD) in their daily lives. 
+                    </h2>
+                    <p>
+                        Effective communication, positive reinforcement, and consistent routines are also important strategies for supporting individuals with ASD. 
+                        Families and caregivers can work with healthcare professionals to develop individualized treatment plans that 
+                        address the unique needs of the individual with ASD.
+                    </p>                    
+                     <div class="img" data-aos="zoom-out" data-aos-delay="200">
+                         <img src="~/images/families1.jpg" class="img-fluid" alt="">
+                         <img src="~/images/families2.jpeg" class="img-fluid" alt="">
+                         <img src="~/images/families3.jpeg" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+@*         <div class="box">
+          <img src="./images/homw1.jpg" alt="#">
+          <div class="text">
+           <h2>Box Title</h2>
+           <p>Text content goes here.</p>
+          </div>*@
+    </body>
+</section>
+  
+
+
+  
+  @*<main> gpt
+                <section class="challenge">
+                    <h2>Our Challenge</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod elit a odio vestibulum, id bibendum est congue. Maecenas efficitur nulla quis velit tempor posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed finibus ipsum eget aliquet feugiat. Donec at mi vel massa fermentum interdum. Suspendisse potenti.</p>
+                </section>
+
+                <section class="familiar">
+                    <h2>Familiar Territory</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod elit a odio vestibulum, id bibendum est congue. Maecenas efficitur nulla quis velit tempor posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed finibus ipsum eget aliquet feugiat. Donec at mi vel massa fermentum interdum. Suspendisse potenti.</p>
+                </section>
+
+                <section class="service-label">
+                    <h2>Our Service Label</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod elit a odio vestibulum, id bibendum est congue. Maecenas efficitur nulla quis velit tempor posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed finibus ipsum eget aliquet feugiat. Donec at mi vel massa fermentum interdum. Suspendisse potenti.</p>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2023 Autism.</p>
+            </footer>*@
+
