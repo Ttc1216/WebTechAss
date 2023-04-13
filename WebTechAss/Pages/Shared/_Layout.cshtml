@@ -31,6 +31,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Partnership">Partnership</a>
                         </li>
+@*                        <div class="sub-partner">
+                            <ul>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">member</a></li>
+                            </ul>
+                        </div>*@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Blog">Blog</a>
                         </li>
@@ -41,7 +47,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Resource">Resource</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Login/Register">Login/Register</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login/Register</a>
                         </li>
                     </ul>
                 </div>
@@ -65,4 +71,6 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

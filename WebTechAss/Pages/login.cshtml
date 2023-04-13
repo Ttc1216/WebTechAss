@@ -2,58 +2,137 @@
 @model WebTechAss.Pages.Index1Model
 @{
 }
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
-<head>
-	<title>Login Page</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-image: url("../images/bg.jpg");
-			background-size: cover;
-		}
-		form {
-			width: 400px;
-			margin: 0 auto;
-		}
-		input[type=text], input[type=password] {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 8px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-			border-radius: 4px;
-		}
-		button {
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			cursor: pointer;
-			width: 100%;
-			border-radius: 4px;
-		}
-		button:hover {
-			background-color: #45a049;
-		}
-		.container {
-			padding: 16px;
-		}
-	</style>
-</head>
-<body>
-	<form>
-		<div class="container">
-			<label for="username"><b>Username</b></label>
-			<input type="text" placeholder="Enter Username" name="username" required>
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="~/images/login.jpg"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form>
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </button>
 
-			<label for="password"><b>Password</b></label>
-			<input type="password" placeholder="Enter Password" name="password" required>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+             <ion-icon name="logo-google"></ion-icon>
+            </button>
 
-			<button type="submit">Login</button>
-		</div>
-	</form>
-</body>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </button>
+          </div>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" id="form3Example3" class="form-control form-control-lg"
+              placeholder="Enter a valid email address" />
+            <label class="form-label" for="form3Example3">Email address</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" id="form3Example4" class="form-control form-control-lg"
+              placeholder="Enter password" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Remember me
+              </label>
+            </div>
+            <a href="#!" class="text-body">Forgot password?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                class="link-danger">Register</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  </section>
+  <br />
+  <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Malaysian Autism Resource Foundation (MARF)</h4>
+        <p>Registration Number: 123456-A</p>
+        <p>Address: 123 Main Street, Kuala Lumpur, Malaysia</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Contact Us</h4>
+        <p>E-mail: info@marf.org.my</p>
+        <p>Phone: +60 12-345 6789</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
+<style>
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+
+.h-custom {
+height: calc(100% - 73px);
+}
+
+
+footer {
+  background-color: darkblue;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+footer h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:#ffffff;
+}
+
+footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color:#ffffff;
+}
+
+footer .container {
+  max-width: 960px;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .col-md-6 {
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+</style>

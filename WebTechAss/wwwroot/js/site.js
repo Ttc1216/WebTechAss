@@ -12,27 +12,14 @@
 //loginLink.addEventListener('click', () => { wrapper.classList.remove('active'); });
 //btnPopup.addEventListener('click', () => { wrapper.classList.add('active-popup'); });
 //iconClose.addEventListener('click', () => { wrapper.classList.remove('active-popup'); });
-new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 40
-        },
-
-        1200: {
-            slidesPerView: 3,
-        }
+const items = document.querySelectorAll('.accordion button');
+function toggleAccordion() {
+    const itemToggle = this.getAttribute('aria-expanded');
+    for (i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
     }
-});
+    if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+    }
+}
+items.forEach((item) => item.addEventListener('click', toggleAccordion));
