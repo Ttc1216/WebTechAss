@@ -1,6 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
+﻿<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AutismL</title>
@@ -13,7 +11,7 @@
 </head>
 @*<body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="width:100%">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">AutismSafe</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -26,16 +24,85 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Partnership">Partnership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/FAQ">FAQ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Resource">Resource</a>
+                            <ul>
+                                <li><a href="#">Drop Down 1</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Login/Register</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header>
+    </header>*@
+<body>
+   <header>
+       <h2 class="logo">MARF</h2>
+       <nav id="navbar" class="navbar" style="width:100%">
+          <a href="Index">Home</a>
+          <a href="About">About us</a>
+           <div class="dropdown"><a href="Partnership">Partnership<i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Staff</a></li>
+              <li><a href="Volunteer">Volunteer</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+            </ul>
+          </div>
+          <a href="Blog">Blog</a>
+          <a href="FAQ">FAQ</a>
+          <a href="Resource">Resource</a>
+          <a href="Login">Login/Register</a>
+          </nav><!-- .navbar -->
+  </header><!-- End Header -->
+@*
+          <nav id="navbar" class="navbar" style="width:100%">
+        <ul>
+          <li><a href="Index">Home</a></li>
+          <li><a href="About">About us</a></li>
+          <li><a href="Partnership">Partnership</a></li>
+          <li><a href="Blog">Blog</a></li>
+          <li><a href="FAQ">FAQ</a></li>
+          <li class="dropdown"><a href="Resource"><span>Resource</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a href="login">Login/Register</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->*@
+
+
+    <div class="background">
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -51,6 +118,3 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</html>
