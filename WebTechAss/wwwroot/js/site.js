@@ -41,3 +41,7 @@ new Swiper('.testimonials-slider', {
         clickable: true
     }
 });
+/*Popup*/
+function togglePopup() {
+    document.getElementById("popup-1").classList.toggle("active");
+}

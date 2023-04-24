@@ -2,49 +2,147 @@
 @model WebTechAss.Pages.PartnershipModel
 @{
 }
+<link rel="stylesheet" href="~/js/site.js" />
+
 <body>
     <br /><br />
-	<div class="heading">
-		<h1>Collaborate with us</h1>
-		<p>
-			Speak to us and see how we can collaborate to achieve your CSR goals.
-		</p>
-	</div>
-	<div class="container1">
-	<section class="partner1">
-		<div class="partner1-image">
-			 <img src="~/images/partner.jpg" alt="Sample image">
-		</div>
-		<div class="partner-content">
-			<h2>Join us</h2>
-			<p>Creating NeurodiVentures and equipping Autistic people 
-				for collaboration for life</p>
-		</div>
-	</section>
+<
+<div class="container1">
+  <img src="~/images/collaborate.png" alt="Nature" style="width:100%; height:90%">
+  <div class="text-block">
+    <h2>Collaborate with us</h2>
+    <p>Speak to us and see how we can collaborate to achieve your CSR goals.</p>
+  </div>
 </div>
+
+
 </body>
-	<section id="Partnership" class="partnership">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
-	<main>
-		<h2>What We Offer</h2>
-		<ul>
-			<li>Access to our customer base</li>
-			<li>Collaborative marketing efforts</li>
-			<li>Product integration</li>
-			<li>Joint events and promotions</li>
-			<li>Exclusive discounts and offers</li>
-		</ul>
 
-		<h2>Why Partner with Us</h2>
-		<p>We believe that our company is an ideal partner for businesses that share our values and goals. Here are some reasons why:</p>
-		<ul>
-			<li>Our commitment to quality and customer satisfaction</li>
-			<li>Our passion for innovation and creativity</li>
-			<li>Our track record of success</li>
-			<li>Our willingness to collaborate and build long-term relationships</li>
-		</ul>
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><ion-icon name="create-sharp"></ion-icon></div>
+              <h4 class="title">Found our program</h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <button id="myButton">Read More</button>
+              <div id="myPopup" class="popup" style="z-index:1">
+               <div class="popup-content">
+                  <h1>
+                  Fund Our Programs
+              </h1>
+            <p>If your organisation is looking to address education and poverty issues in Malaysia, connect with us! With funding support, 
+                together we can improve solutions that narrows the gaps vulnerable communities face in literacy, access to education or family well-being.</p>
+            <button id="closePopup">
+                  Close
+              </button>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><ion-icon name="cash"></ion-icon></div>
+              <h4 class="title">Fundaries for us</h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                          <button id="myButton">Read More</button>
+              <div id="myPopup-2" class="popup" style="z-index:1">
+               <div class="popup-content-2">
+                  <h1 style="color:black;">Fundraise for us</h1>
+            <p>Involve your staff, businesses or clients to be part of your fundraising initiative 
+                where proceeds will be channeled to to address education and poverty issues in Malaysia.
+                Cash donations may be eligible for tax-exemption should it meet the 
+                conditions under subsection 44(6) of Income Tax Act 1967</p>
+            <button id="closePopup">
+                  Close
+              </button>
+            </div>
+          </div>
+            </div>
+          </div>
 
-		<h2>How to Partner with Us</h2>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><ion-icon name="person-add"></ion-icon></div>
+              <h4 class="title"><a href="Volunteer">Volunteer with us</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><ion-icon name="extension-puzzle"></ion-icon></div>
+              <h4 class="title">Join us</h4>    
+               <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+
+          </div>
+        </div>
+                       
+    <script>
+        myButton.addEventListener("click", function () {
+            myPopup.classList.add("show");
+        });
+        closePopup.addEventListener("click", function () {
+            myPopup.classList.remove("show");
+        });
+        window.addEventListener("click", function (event) {
+            if (event.target == myPopup) {
+                myPopup.classList.remove("show");
+            }
+        });
+    </script>
+              @* <button onclick="togglePopup()">Show Popup</button>
+       <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo aspernatur laborum rem sed laudantium excepturi veritatis voluptatum architecto, dolore quaerat totam officiis nisi animi accusantium alias inventore nulla atque debitis.</p>
+            </div>
+           </div>*@
+      </div>
+      </div>
+    </section>
+
+    <section id="clients" class="clients section-bg">
+        <h2>Our Patner</h2>
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/images/p1-removebg-preview.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/images/p2-removebg-preview.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/images/p3-removebg-preview.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/images/p4-removebg-preview.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/images/p5-removebg-preview.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="~/images/p6-removebg-preview.png" class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+		@*<h2>How to Partner with Us</h2>
 		<p>If you are interested in partnering with us, please fill out the form below and we will be in touch with you shortly:</p>
 		<form action="#" method="post">
 			<label for="name">Name:</label>
@@ -60,17 +158,39 @@
 			<textarea id="message" name="message" rows="5" cols="30"></textarea><br>
 
 			<input type="submit" value="Submit">
-		</form>
-	</main>
-	</div>
-</section>
+		</form>*@
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
 
 <style>
 body{
 	background-color:#f2f2f2;
 }
-.heading{
+.container1 {
+  position: relative;
+  font-family: Arial;
+  font-size:23px;
+}
+h2 {
+    color:darkblue;
+}
+.text-block {
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+  left:190px;
+  background-color: white;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top:15px;
+  text-align:center;
+  width:fit-content;
+}
+/*.heading{
     width:90%;
     display:flex;
     justify-content:center;
@@ -137,7 +257,7 @@ body{
     line-height:1.5;
     color:#666;
 }
-
+*/
 .partnership main {
         margin: 20px;
     }
@@ -185,4 +305,206 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+/*--------------------------------------------------------------
+# Featured Services
+--------------------------------------------------------------*/
+.featured-services .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.featured-services .icon-box::before {
+  content: "";
+  position: absolute;
+  background: #cbe0fb;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.featured-services .icon-box:hover::before {
+  background: #106eea;
+  top: 0;
+  border-radius: 0px;
+}
+
+.featured-services .icon {
+  margin-bottom: 15px;
+}
+
+.featured-services .icon icon-icon {
+  font-size: 48px;
+  line-height: 1;
+  color: #106eea;
+  transition: all 0.3s ease-in-out;
+}
+
+.featured-services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.featured-services .title a {
+  color: #111;
+}
+
+.featured-services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.featured-services .icon-box:hover .title a,
+.featured-services .icon-box:hover .description {
+  color: #fff;
+}
+
+.featured-services .icon-box:hover .icon icon-icon {
+  color: #fff;
+}
+
+/*.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  z-index:1;
+  display:none;
+}
+
+.popup .content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  width:500px;
+  height:250px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+button {
+  position:absolute;
+  top:80%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:15px;
+  font-size:20px;
+  border:2px solid #222;
+  color:#222;
+  text-transform:uppercase;
+  font-weight:600;
+  background:#fff;
+}*/
+.popup,
+.popup2{
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+.popup-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 40%;
+            font-weight: 300;
+            text-align:center;
+            
+}
+.popup-content button {
+            display: block;
+            margin: 0 auto;
+        }
+.popup-content-2 {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888888;
+            width: 40%;
+            font-weight: 300;
+            text-align:center;
+            
+}
+.popup-content-2 button {
+            display: block;
+            margin: 0 auto;
+}       
+ .show {
+            display: block;
+}
+ h1 {
+            color:blueviolet;
+            font-family:'Californian FB';
+}
+
+.clients {
+  padding: 15px 0;
+  text-align: center;
+  background-color:white;
+}
+
+.clients img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+}
+
+.clients img:hover {
+  transform: scale(1.15);
+}
+
+
+  .clients img {
+    max-width: 90%;
+  }
+
 </style>
