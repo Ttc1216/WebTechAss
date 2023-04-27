@@ -19,34 +19,33 @@
   <div class="centered">Get Involved</div>
 </div><br />
 
-   <h3>Interested in volunteering?</h3>
+  @* <h3>Interested in volunteering?</h3>*@
+   <section class="fullContainer" id="volunteerSection">
+	   <div class="container1">
+		   <h2 class="sectionTitle">Interested in volunteer?</h2>
+		   <div class="cards">
+			   <div class="onlineBox">
+				   <div class="title">1) Register Online</div>
+				   <p>Register online through our volunteer registration form</p>
+				   <button>Click here</button>
+			   </div>
 
-   <div class="container1">
-	   <div class="box1">
-		   <ion-icon name="document-text"></ion-icon>
-		   <h2>1) Register Online</h2>
-		   <p>Register online through our volunteer registration form.</p>
+			   <div class="meetBox">
+				   <div class="title">2) Meet Us</div>
+				   <p>Meet us in person and go through an orientation to prepare yourself</p>
+				   
+			   </div>
+
+			   <div class="onlineBox">
+				   <div class="title">3) Impact Lives</div>
+				   <p>Start impacting lives! Join our staff & other volunteers on-ground.</p>
+				
+			   </div>
+
+		   </div>
 	   </div>
-	   <div class="box2">
-		   <ion-icon name="people"></ion-icon>
-		   <h2>2) Meet Us</h2>
-		   <p>Meet us in person and go through an orientation to prepare yourself.</p>
-	   </div>
-	   <div class="box3">
-		   <ion-icon name="checkmark-circle"></ion-icon>
-		   <h2>3) Impact Lives</h2>
-		   <p>Start impacting lives! Join our staff & other volunteers on-ground.</p>
-	   </div>
-   </div>
-   <br /><br />
-@*   <div class="container3">
-  <img src="~/images/families1.jpg" alt="Image">
-  <p>"I love to work with kids and youth and watch them grow in the process. 
-	  It's the idea of: even if I can make them happy or make them think or make a difference in their lives, 
-	  no matter one hour or one day or one week or one
-      year, it's worth the effort"
-</p>
-</div>*@
+   </section>
+
    <!-- ======= Testimonials Section ======= -->
 
 <div class="slideshow-container" style:"1500px">
@@ -138,56 +137,77 @@ container {
   font-size:3.2rem;
   font-family:'Californian FB'
 }
-.container1{
-	display:flex;
-	background-color:black;
-	justify-content: center;
-	align-items:center;
+
+.sectionTitle{
+	width:500px;
+	border-bottom: 3px solid #FF3333;
+	text-align:center;
+	font-size:2rem;
+	font-weight:200;
+	margin: 0 auto 50px;
+	position:relative;
+	padding:10px 0;
+	text-transform:uppercase;
 }
 
-.box1,
-.box2,
-.box3{
+.sectionTitle::after{
+	display:inline-block;
+	content:"";
+	height:15px;
+	width:15px;
+	background-color:#FF3333;
+	position:absolute;
+	left:calc(50% - 10px);
+	top:calc(80% - 0px);
+	transform:rotate(45deg) translate(50 50%);
+	border:3px solid #fff;
+}
+section{
+	padding:100px 0;
+	position:relative;
+}
+
+#volunteerSection .cards{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	position:relative;
+	height:245px;
+}
+#volunteerSection .cards > div {
 	width:300px;
-	height:200px;
-	background:radial-gradient(circle at the top level, transparent 340px,rgba(255,255,255, .3)), 
-	radial-gradient(circle at bottom right, transparent 340px,rgba(255,255,255, .3));
-	margin:20px;
-	padding:5px;
-	color:whitesmoke;
+	background-color:lightgrey;
+	padding:50px;
+	color:#444;
 	text-align:center;
-	transition: .3s ease-in-out;
+	border-radius:15px;
+	height:215px;
+	border:1px solid #ccc;
+
 }
-.box1:hover, 
-.box2:hover,
-.box3:hover{
-	background-color:cornflowerblue;
+#volunteerSection .cards > div .title{
+	font-size:18px;
+	font-weight:600;
+	text-transform:uppercase;
 }
-.box1 icon,
-.box2 icon,
-.box3 icon{
-	font-size:10px;
+#volunteerSection .cards > div p{
+	font-size:14px;
+	margin-top:15px;
 }
-.fab{
-	margin: 1.2rem 0.3rem 0;
+#volunteerSection .card > div button{
+	border: 1px solid #FF3333;
+	outline:none;
+	padding:7px 15px;
+	margin-top:15px;
+	font-size:12px;
+	border-radius:3px;
+	cursor:pointer;
 }
-h2{
-	letter-spacing:2px;
-	font-size:30px;
-	margin:0 0.6rem 0;
+#volunteerSection .cards > div:hover button{
+	background: #FF3333;
+	color:#fff;
 }
-.box1 p,
-.box2 p,
-.box3 p{
-	margin-top:5px;
-	font-size:20px;
-	line-height:inherit;
-	padding:0 10px;
-}
-h3{
-	font-size:30px;
-	font-family:'Californian FB';
-}
+
 .mySlides {
   display: flex;
   flex-direction: row-reverse;
@@ -202,7 +222,7 @@ h3{
 }
 .mySlides p {
   text-align: center;
-  font-size:25px;
+  font-size:20px;
 }
 /** {box-sizing: border-box}
 .mySlides {display: none}

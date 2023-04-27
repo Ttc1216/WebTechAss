@@ -3,12 +3,15 @@
 @{
 }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <body> 
-    <br /><br /><br />
-    <h2>Internship</h2>
+    <br /><br />
+
 <section id="internship" class="internship section-bg">
       <div class="container" data-aos="fade-up" style="width:100%">
-
+           <div class="section-title">
+               <h2>Internship</h2>
+           </div>
         <div class="row no-gutters">
           <div class="content col-xl-5 d-flex align-items-stretch">
             <div class="content">
@@ -47,9 +50,54 @@
 
       </div>
     </section><!-- End About Section -->
+    <section id="pricing" class="pricing section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>What you get</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box" data-aos="fade-up" data-aos-delay="100">
+                <img src="~/images/intern1.jpg" alt="" style="width:100%;">
+              <h3>Education beyond the classroom</h3>
+              <p>Prepare to be exposed to new environments and experiences that will shape your worldview about the community and nation 
+                  - and the important role you play in positively influencing it. 
+                  You have the chance to apply your academic knowledge to address real social needs of the community.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+            <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+                <img src="~/images/intern3.jpg" alt="" style="width:100%; height:210px">
+              <h3>Rise up to the challenge​</h3>
+              <p>We believe that leadership is not about position or title but about influence; therefore no role is insignificant. 
+                  You will be given the opportunity to lead projects, 
+                  deliver presentations, facilitate at our training sessions in schools, communities and children homes.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <img src="~/images/intern2.jpg" alt="" style="width:100%">
+              <h3>Invest in your employability</h3>
+             <p>Enhance your competitiveness in the marketplace by developing skills 
+                 such as problem solving, critical thinking, 
+                 presentation & public speaking, project & event management, people & time management –
+                 which will help you in your future career.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
 
  <div class="container1"> 
-    <h2>Skills & qualifications</h2>
+    <h3>Skills & qualifications</h3>
     <ul>
         <li>High school graduate diploma</li>
         <li>Proficiency in Microsoft Word, Excel and Powerpoint</li>
@@ -58,7 +106,7 @@
        
     
     <hr style="height:2px;border-width:0;color:gray;background-color:gray" />
-    <h2>How to apply?</h2>
+    <h3>How to apply?</h3>
     <ul>
         <li>Send the following documents to jobs@gengemilang.org with the subject heading titled ‘Internship Application’</li>
         <li>Cover letter, Resume, Passport-sized photo</li>
@@ -67,8 +115,8 @@
     </div>    
 
     <br />
-    <h3 style="text-align:center">Send your Resume to jobs@gengemilang.org and you'll hear from us soon.</h3>
-    <button class="btn"><a href="contract" style="text-decoration:none">Contract us</a></button>
+    <h4 style="text-align:center">Send your Resume to jobs@gengemilang.org and you'll hear from us soon.</h4>
+    <button class="btn"><a href="contact" style="text-decoration:none">Contact us</a></button>
     
 </body>
 <style>
@@ -185,15 +233,42 @@ section {
   }
 
 
-
-  .internship {
+.internship {
     text-align: center;
   }
-.container1{
-    margin-left:120px;
+
+.pricing .box {
+  padding: 20px;
+  background: #2b2b2b;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  height:600px;
 }
-.container1 h2{
-    color:darkred;
+
+.pricing .box h3 {
+  font-weight: 400;
+  padding: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.pricing .box h4 {
+  font-size: 42px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+}
+.pricing .featured {
+  background: #e03a3c;
+}
+/*.container1{
+    margin-left:120px;
+}*/
+.container1 h3{
+    color:#e03a3c;
 }
 .container1 icon-icon{
     float:left;
@@ -202,7 +277,7 @@ section {
 .container1 ul li{
     padding-left:40px;
     padding-right:100px;
-    font-size:22px; 
+    font-size:20px; 
 }
 .btn {
   background-color: black;
@@ -215,6 +290,7 @@ section {
   opacity: 1;
   transition: 0.3s;
   text-decoration:none;
+  
 }
 
 .btn:hover {opacity: 0.6}
