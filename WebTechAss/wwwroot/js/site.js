@@ -25,8 +25,8 @@ function toggleAccordion() {
 items.forEach((item) => item.addEventListener('click', toggleAccordion));
 
 /**
-   * Testimonials slider
-   */
+ * Testimonials slider
+ */
 new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
@@ -39,7 +39,30 @@ new Swiper('.testimonials-slider', {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
     }
+});
+
+/**
+ * Animation on scroll
+ */
+window.addEventListener('load', () => {
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    })
 });
 /*Popup*/
 function togglePopup() {
