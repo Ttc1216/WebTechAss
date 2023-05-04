@@ -34,7 +34,7 @@
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
               <button id="myButton">Read More</button>
               <div id="myPopup" class="popup" style="z-index:1">
-               <div class="popup-content">
+               <div class="popup-content" style="z-index:1">
                   <h1>
                   Fund Our Programs
               </h1>
@@ -48,12 +48,12 @@
           </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200" style="z-index:0">
               <div class="icon"><ion-icon name="cash"></ion-icon></div>
               <h4 class="title">Fundaries for us</h4>
               <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                          <button id="myButton">Read More</button>
-              <div id="myPopup-2" class="popup" style="z-index:1">
+@*             <button id="myButton">Read More</button>
+              <div id="myPopup" class="popup-2" style="z-index:1">
                <div class="popup-content-2">
                   <h1 style="color:black;">Fundraise for us</h1>
             <p>Involve your staff, businesses or clients to be part of your fundraising initiative 
@@ -62,11 +62,11 @@
                 conditions under subsection 44(6) of Income Tax Act 1967</p>
             <button id="closePopup">
                   Close
-              </button>
+              </button>*@
             </div>
           </div>
-            </div>
-          </div>
+           
+          
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
@@ -81,11 +81,10 @@
               <div class="icon"><ion-icon name="extension-puzzle"></ion-icon></div>
               <h4 class="title">Join us</h4>    
                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-
           </div>
         </div>
-                       
-    <script>
+            </div>
+            <script>
         myButton.addEventListener("click", function () {
             myPopup.classList.add("show");
         });
@@ -108,7 +107,7 @@
             </div>
            </div>*@
       </div>
-      </div>
+      
     </section>
 
     <section id="clients" class="clients section-bg">
@@ -145,24 +144,67 @@
 
       </div>
     </section><!-- End Clients Section -->
+
+    <section>
+    <div class="container-2">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                        <input type="text" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="text" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="text" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+    </section>
 </body>
-		@*<h2>How to Partner with Us</h2>
-		<p>If you are interested in partnering with us, please fill out the form below and we will be in touch with you shortly:</p>
-		<form action="#" method="post">
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name"><br>
-
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email"><br>
-
-			<label for="phone">Phone:</label>
-			<input type="tel" id="phone" name="phone"><br>
-
-			<label for="message">Message:</label><br>
-			<textarea id="message" name="message" rows="5" cols="30"></textarea><br>
-
-			<input type="submit" value="Submit">
-		</form>*@
+	
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -236,74 +278,7 @@ h2 {
   text-align:center;
   width:fit-content;
 }
-/*.heading{
-    width:90%;
-    display:flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-    text-align:center;
-    margin:20px auto;
-}
-.heading h1{
-    font-size:45px;
-    color:#000;
-    margin-bottom: 25px;
-    position:relative;
-}
-.heading h1::after{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:4px;
-    display: block;
-    margin: 0 auto;
-    background-color:#4caf50;
-}
-.heading p{
-    font-size:18px;
-    color:#666;
-    margin-bottom: 10px;
-}
-.container1{
-    width:90%;
-    margin:0 auto;
-    padding:10px 20px;
-}
-.partner1{
-    display:file;
-    justify-content:space-around;
-    align-items:center;
-    flex-wrap:wrap;
-}
-.partner1-image{
-    flex:1;
-    margin-right:40px;
-    overflow:hidden;            
-}
-.partner1-image img{
-    max-width: 80%;
-    height:auto;
-    display:block;
-    transition: 0.5s ease;
-}
-.partner1-image:hover img{
-    transform:scale(1.2);
-}
-.partner-content{
-    flex:1;
-}
-.partner-content h2{
-    font-size: 23px;
-    margin-bottom: 15px;
-    color:#333;
-}
-.partner-content p{
-    font-size: 18px;
-    line-height:1.5;
-    color:#666;
-}
-*/
+
 .partnership main {
         margin: 20px;
     }
@@ -347,7 +322,7 @@ input[type="submit"] {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 0px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -483,8 +458,8 @@ button {
   font-weight:600;
   background:#fff;
 }*/
-.popup,
-.popup2{
+.popup
+/*.popup-2*/{
             position: fixed;
             z-index: 1;
             left: 0;
@@ -549,8 +524,140 @@ button {
 }
 
 
-  .clients img {
+.clients img {
     max-width: 90%;
+}
+
+.container-2{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container-2 .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container-2 .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
   }
 
+ .container-2{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+   overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+
+  .container-2 .content .category{
+    flex-direction: column;
+  }
+
+   
 </style>

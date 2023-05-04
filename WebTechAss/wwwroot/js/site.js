@@ -67,4 +67,18 @@ window.addEventListener('load', () => {
 /*Popup*/
 function togglePopup() {
     document.getElementById("popup-1").classList.toggle("active");
+    document.getElementById("popup-2").classList.toggle("active");
 }
+
+//function togglePopup(num) {
+//    popups[num].classList.toggle("active");
+//}
+
+//let popups = document.getElementsByClassName("popup");
+//let closeBtns = document.getElementsByClassName("close-btn");
+//let openBtns = document.getElementsByClassName("btn");
+
+//for (let i = 0; i < closeBtns.length; i++) {
+//    closeBtns[i].addEventListener("click", function () { togglePopup(i) });
+//    openBtns[i].addEventListener("click", function () { togglePopup(i) });
+//}
