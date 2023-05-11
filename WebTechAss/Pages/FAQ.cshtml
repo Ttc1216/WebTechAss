@@ -5,77 +5,81 @@
 <section id="faq" class="faq">
 <body>
   <div class="container">
-      <h2>FAQs</h2>
-      <div class="accordion">
+            <h2>FAQs</h2>
+
+            <div class="accordion">
         <div class="accordion-item">
           <button id="accordion-button-1" aria-expanded="false">
-            <span class="accordion-title">Why is the moon sometimes out during the day?</span>
+             <span class="accordion-title">Can my friends and I pool funds to give?</span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
+               Absolutely! Every bit counts so use this opportunity to make a difference together. You may request for individual receipts by emailing
+              finance@gengemilang.org with your online banking/iPay88 successful transactions details.
             </p>
           </div>
         </div>
         <div class="accordion-item">
           <button id="accordion-button-2" aria-expanded="false">
-            <span class="accordion-title">Why is the sky blue?</span>
+                        <span class="accordion-title">Is giving invested optimally?</span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
-            </p>
+                We recognize that every resource entrusted to us can transform our client’s lives. We promise to manage the 
+                funds received honestly and will use it effectively to benefit our clients.
+                        </p>
           </div>
         </div>
         <div class="accordion-item">
           <button id="accordion-button-3" aria-expanded="false">
-            <span class="accordion-title">Will we ever discover aliens?</span>
+                        <span class="accordion-title">After registering online, when will I get to volunteer at my chosen program?"</span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
+              You may begin volunteering at your chosen program the moment you’ve completed your Volunteer Orientation (VO), signed our code of conduct & agreed to a volunteer date set by our staff. 
+              Upon registration, you should receive a call from us within a month.
             </p>
           </div>
         </div>
         <div class="accordion-item">
           <button id="accordion-button-4" aria-expanded="false">
-            <span class="accordion-title">How much does the Earth weigh?</span>
+                        <span class="accordion-title">How much time do I need to volunteer?</span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potenti.
+                This is up to you. Based on your interest & availability, 
+                we have volunteer opportunities for one-off events, weekdays, weekends, on a weekly, 
+                fortnightly or monthly basis in our communities, institutions and schools
             </p>
           </div>
         </div>
         <div class="accordion-item">
           <button id="accordion-button-5" aria-expanded="false">
-            <span class="accordion-title">How do airplanes stay up?</span>
+           <span class="accordion-title">How much do you charge for your full volunteer training workshop?</span>
             <span class="icon" aria-hidden="true"></span>
           </button>
           <div class="accordion-content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut.
-              Ut tortor pretium viverra suspendisse potent.
+                Contact info@gengemilang.org for more information.
               </p>
           </div>
         </div>
       </div>
-    <script src="~/js/site.js"></script>
+            <script src="~/js/site.js"></script>
     </div>
-</body>
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </body>
 </section>
 
 <style>
@@ -105,6 +109,8 @@ body {
     color: #0d0212;
     font-family:'Californian FB';
 }
+
+
 .faq .container {
     margin: 0 auto;
     padding: 4rem;
@@ -213,6 +219,48 @@ body {
         margin: 2em 0;
         color:darkslategray;
 }
+
+    .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+
+    .searchTerm {
+        width: 100%;
+        border: 3px solid steelblue;
+        border-right: none;
+        padding: 5px;
+        height: 36px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #9DBFAF;
+    }
+
+        .searchTerm:focus {
+            color: steelblue;
+        }
+
+    .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid steelblue;
+        background: steelblue;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    /*Resize the wrap to see the search bar change!*/
+    .wrap {
+        width: 20%;
+        position: absolute;
+        top: 26%;
+        left: 67%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
