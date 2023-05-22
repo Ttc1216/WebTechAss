@@ -1,0 +1,102 @@
+﻿@page
+@model WebTechAss.Pages.donateModel
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet.css"/>
+</head>
+
+<body>
+    <div class="container3">
+
+        <form action="">
+        <div class="row">
+
+            <div class="col">
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="john" />
+                </div>
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="text" placeholder="example@gmail.com" />
+                    </div>
+                    <div class="inputBox">
+                        <span>address :</span>
+                        <input type="text" placeholder="room - street - locality" />
+                    </div>
+                    <div class="inputBox">
+                        <span>city :</span>
+                        <input type="text" placeholder="mumbai" />
+                    </div>
+                <div class="flex">
+                        <div class="inputBox">
+                            <span>state :</span>
+                            <input type="text" placeholder="malaysia" />
+                        </div>
+                        <div class="inputBox">
+                            <span>zip code :</span>
+                            <input type="text" placeholder="123 456" />
+                        </div>
+                </div>
+            </div>
+                <div class="col">
+                    <h3 class="title">payment</h3>
+
+                    <div class="inputBox">
+                        <span>cards accpected :</span>
+                        <img src="images"  alt=""/>
+                    </div>
+
+                    <div class="inputBox">
+                        <span>name on card :</span>
+                        <input type="text" placeholder="mr. john" />
+                    </div>
+                   
+                    <div class="inputBox">
+                        <span>credit card number :</span>
+                        <input type="number" placeholder="1111-2222-3333-4444" />
+                    </div>
+                    <div class="inputBox">
+                        <span>exp month :</span>
+                        <input type="text" placeholder="May" />
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>exp year :</span>
+                            <input type="number" placeholder="2022" />
+                        </div>
+                        <div class="inputBox">
+                            <span>CW :</span>
+                            <input type="text" placeholder="1234" />
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <input type="submit" value="proceed to checkout" class="submit-btn" />
+
+        </form>
+    </div>
+</body>
+
+
+<style>
+*{
+    margin:0;
+    padding:inherit;
+    box-sizing:border-box;
+    outline:none;
+    border:none;
+    text-transform:capitalize;
+    transition:all .2s linear;
+}
+body{
+        background: linear-gradient(90deg,#2c698d 55%, #bae8e8 45.1%);
+}
+
+
+</style>

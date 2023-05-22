@@ -1,0 +1,237 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="StyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+            integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <title>Admin Dashboard Panel</title>
+
+
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+        <div class="logo-image">
+            <h2>MARF</h2>
+        </div>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                  <i class="fa-sharp fa-solid fa-house"></i>
+                  <span class="link-name">Dashsboard</span>
+                </a></li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-file"></i>
+                        <span class="link-name">Content</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table">
+                        <i class="fa-light fa-table"></i>
+                        <span class="link-name">Tables</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="schedule">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="link-name">Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="link-name">Comment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="setting">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Setting</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <span class="link-name">Dark mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                    <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+                <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search here..." />
+                </div>
+          <img src="~/image/images.jpg" alt="" />  
+        </div> 
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="fa-regular fa-heart"></i>
+                        <span class="text">Total Likes</span>
+                        <span class="number">52,520</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="text">Comment</span>
+                        <span class="number">4,300</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <span class="text">Donation</span>
+                        <span class="number">152,520</span>
+                    </div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="title">
+                    <i class="fa-solid fa-timer"></i>
+                    <span class="text">Recent Activity</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Name</span>
+                        <span class="data-list">Jaskson Pah</span>
+                        <span class="data-list">Jaskson Pah</span>
+                        <span class="data-list">Jaskson Pah</span>
+                        <span class="data-list">Jaskson Pah</span>
+                        <span class="data-list">Jaskson Pah</span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Type</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                        <span class="data-list">Admin</span>
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        <span class="data-list">abc123@gmail.com</span>
+                        <span class="data-list">abc123@gmail.com</span>
+                        <span class="data-list">abc123@gmail.com</span>
+                        <span class="data-list">abc123@gmail.com</span>
+                        <span class="data-list">abc123@gmail.com</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Joined</span>
+                        <span class="data-list">2020-01-01</span>
+                        <span class="data-list">2020-01-01</span>
+                         <span class="data-list">2020-01-01</span>
+                          <span class="data-list">2020-01-01</span>
+                        <span class="data-list">2020-01-01</span>
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Status</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                        <span class="data-list">Liked</span>
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+            <div>
+            <canvas id="myChart" style="width:850px;max-width:1000px; display:block; height:300px;"></canvas>
+            <h3 ></h3>
+            <script>
+                //const xValues = [Jan, Feb, Mar, Apl, May, June, July, Aug, Sept, Oct, Nov, Dec];
+                const xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+                const yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15, 15];
+
+                new Chart("myChart", {
+                    type: "line",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            fill: false,
+                            lineTension: 0,
+                            backgroundColor: "rgba(0,0,255,1.0)",
+                            borderColor: "rgba(0,0,255,0.1)",
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: { display: false },
+                        scales: {
+                            yAxes: [{ ticks: { min: 6, max: 16 } }],
+                        }
+                    }
+                });
+            </script>
+            </div>
+@*            <div id="myPlot" style="width:850px;max-width:1000px"></div>
+
+            <script>
+                const xArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+                const yArray = [700, 800, 800, 900, 900, 900, 1000, 1100, 1400, 1400, 1500, 700];
+
+                // Define Data
+                const data = [{
+                    x: xArray,
+                    y: yArray,
+                    mode: "lines"
+                }];
+
+                // Define Layout
+                const layout = {
+                    xaxis: { range: [1, 12], title: "Month" },
+                    yaxis: { range: [500, 1500], title: "Donation" },
+                    title: "Amount"
+                };
+
+                // Display using Plotly
+                Plotly.newPlot("myPlot", data, layout);
+            </script>*@
+
+
+        </div>
+    </section>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+
+

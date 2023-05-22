@@ -1,0 +1,654 @@
+﻿@page
+@model admin_panel.Pages.scheduleModel
+@{
+}
+<head>
+    <link rel="stylesheet" href="StyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/js/script.js" />
+    <meta name="description"
+          content="Stay organized with our user-friendly Calendar featuring events, reminders, and a customizable interface. Built with HTML, CSS, and JavaScript. Start scheduling today!" />
+    <meta name="keywords"
+          content="calendar, events, reminders, javascript, html, css, open source coding" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <h2>MARF</h2>
+            </div>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Dashsboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-file"></i>
+                        <span class="link-name">Content</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="table">
+                        <i class="fa-light fa-table"></i>
+                        <span class="link-name">Tables</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="schedule">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="link-name">Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="link-name">Comment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="setting">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Setting</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <span class="link-name">Dark mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here..." />
+            </div>
+            <img src="~/image/images.jpg" alt="" />
+        </div>
+
+        <div class="container5">
+            <div class="left">
+                <div class="calendar">
+                    <div class="month">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="date"></div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+
+                    <div class="weekdays">
+                        <div>sun</div>
+                        <div>mon</div>
+                        <div>tue</div>
+                        <div>wed</div>
+                        <div>thur</div>
+                        <div>fri</div>
+                        <div>sat</div>
+                    </div>
+
+                    <div class="days">
+                       @* <div class="day prev-date">30</div>
+                        <div class="day prev-date">31</div>
+                            <div class="day">1</div>
+                            <div class="day">12</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day event">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day event active">14</div>
+                        <div class="day today">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day event">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+                        <div class="day">29</div>
+                        <div class="day">20</div>
+                        <div class="day next-date">1</div>
+                        <div class="day next-date">2</div>
+                        <div class="day next-date">3</div>*@
+                    </div>
+                
+                <div class="goto-today">
+                    <div class="goto">
+                        <input type="text" placeholder="mm/yyyy" class="date-input" />
+                        <button class="goto-btn">go</button>
+                    </div>
+                    <button class="today-btn">today</button>
+                </div>
+            </div>
+        </div>
+            
+        <div class="right">
+            <div class="today-date">
+                <div class="event-day">Wed</div>
+                    <div class="event-date">12th december 2022</div>
+            </div>
+            <div class="events">
+                
+            </div>
+                <div class="add-event-wrapper active">
+                    <div class="add-event-header">
+                        <div class="title">Add Event</div>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                    <div class="add-event-body">
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Event Name" class="event-name" />
+                        </div>
+                        <div class="add-event-input">
+                            <input type="text"
+                                   placeholder="Event Time From"
+                                   class="event-time-from" />
+                        </div>
+                        <div class="add-event-input">
+                          <input type="text"
+                                   placeholder="Event Time To"
+                                   class="event-time-to" />
+                        </div>
+                   </div>
+                    <div class="add-event-footer">
+                        <button class="add-event-btn">Add Event</button>
+                    </div>
+
+                </div>
+              </div>
+            <button class="add-event">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+       
+        <script src="~/js/script.js"></script>
+    </section>
+</body>
+
+<style>
+:root{
+    --primary-clr:#b38add;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#e2e1dc;
+}
+.container5{
+    position:relative;
+    width:980px;
+    min-height:700px;
+    margin: 0 auto;
+    padding:5px;
+    color:#fff;
+    display:flex;
+    border-radius:10px;
+    background-color:#373c4f;
+    padding-top:50px;
+}
+.left{
+    width:60%;
+    padding:20px;
+}
+.calendar{
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    color:#878895;
+    border-radius:5px;
+    background-color:#fff;
+}
+.calendar::before,
+.calendar::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:100%;
+    width:12px;
+    height:97%;
+    border-radius:0 5px 5px 0;
+    background-color:#d3d5d6d7;
+    transform:translateY(-50%);
+}
+.calendar::before{
+    height:94%;
+    left:calc(100% + 12px);
+    background-color:rgb(153, 153, 153);
+}
+.calendar .month{
+    width:100%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 50px;
+    font-size:inherit.2rem;
+    font-weight:500;
+    text-transform:capitalize;
+}
+.calendar .month .prev,
+.calendar .month .next{
+    cursor:pointer;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+      color:var(--primary-color);
+ }
+ .calendar .weekdays{
+     width:100%;
+     height:100px;
+     display:flex;
+     align-items:center;
+     justify-content:space-between;
+     padding:0 20px;
+     font-size:1rem;
+     font-weight:500;
+     text-transform:capitalize;
+ }
+ .calendar .weekdays div{
+     width:14.28%;
+     height:100%;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+ }
+ .calendar .days{
+     width:100%;
+     display:flex;
+     flex-wrap:wrap;
+     justify-content:space-between;
+     padding:0 20px;
+     font-size:1rem;
+     font-weight:500;
+     margin-bottom:20px;
+ }
+
+.calendar .days .day{
+            width: 14.28%;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor:pointer;
+            color: var(--primary-clr);
+            border:1px solid #f5f5f5;
+}
+.calendar .day:not(.prev-date, .next-date):hover{
+    color:#fff;
+    background-color:var(--primary-clr);
+}
+.calendar .days .prev-date,
+.calendar .days .next-date{
+    color:#b3b3b3;
+}
+.calendar .days .active{
+    position:relative;
+    font-size:2rem;
+    color:#fff;
+    background-color:var(--primary-clr);
+}
+
+.calendar .days .active::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    box-shadow: 0 0 10px 2px var(--primary-clr);
+}
+.calendar .days .today{
+    font-size:2rem;
+}
+.calendar .days .event{
+    position:relative;
+}
+
+.calendar .days .event::after{
+    content:"";
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    width:75%;
+    height:6px;
+    border-radius:30px;
+    transform:translateX(-50%);
+    background-color:var(--primary-clr);
+}
+.calendar .event:hover::after{
+    background-color:#fff;
+}
+.calendar .active.event::after{
+            background-color: #fff;
+            bottom:20%;
+
+}
+.calendar .active.event{
+    padding-bottom:10px;
+}
+.calendar .goto-today{
+    width:100%;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:5px;
+    padding:0 20px;
+    margin-bottom:20px;
+    color:var(--primary-clr);
+}    
+.calendar .goto-today .goto{
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    overflow:hidden;
+    border:1px solid var(--primary-clr);
+}
+.calendar .goto-today .goto input{
+    width:100%;
+    height:30px;
+    outline:none;
+    border:none;
+    border-radius:5px;
+    padding:0 20px;
+    color:var(--primary-clr);
+    border-radius:5px;
+}
+.calendar .goto-today button{
+    padding:5px 10px;
+    border:1px solid var(--primary-clr);
+    border-radius:5px;
+    background-color:transparent;
+    cursor:pointer;
+    color:var(--primary-clr);
+}
+
+.calendar .goto-today button:hover{
+                color:#fff;
+                background-color:var(--primary-clr);
+}
+.calendar .goto-today .goto button{
+    border:none;
+    border-left:1px solid var(--primary-clr);
+    border-radius:0;
+}
+.container5 .right{
+    position:relative;
+    width:40%;
+    min-height:100%;
+    padding:20px 0;
+}
+.right .today-date{
+    width:100%;
+    height:50px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    padding-left:70px;
+    margin-top:50px;
+    margin-bottom:20px;
+    text-transform:capitalize;
+}
+.today-date .event-day{
+    font-size:2rem;
+    font-weight:500;
+}
+.today-date .event-date{
+    font-size:1rem;
+    font-weight:400;
+    color:#878895;
+}
+.events{
+    width:100%;
+    height:100%;
+    max-height:600px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    padding:4px;
+}
+.events .event{
+    position:relative;
+    width:95%;
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:5px;
+    padding:0 20px;
+    padding-left:50px;
+    color:#fff;
+    background:linear-gradient(90deg, #3f4458, transparent);
+}
+.events .event:nth-child(even){
+    background:transparent;
+}
+
+.events .event:hover{
+    background: linear-gradient(90deg, var(--primary-clr), transparent);
+}
+.events .event .title{
+    display:flex;
+    align-items:center;
+    pointer-events:none;
+}
+
+.events .event .title .event-title{
+    font-size:1rem;
+    font-weight:400;
+    margin-left:20px;
+}
+
+.events .event .title i{
+    color:var(--primary-clr);
+    font-size:0.5rem;
+}
+
+.events .event:hover .title i,
+.events .event:hover .event-time {
+    color:#fff;
+}
+
+.events .event .event-time{
+    font-size:0.8rem;
+    font-weight:400;
+    color:#878895;
+    margin-left:15px;
+    pointer-events:none;
+}
+.events .event::after{
+        content: "✓";
+        position:absolute;
+        top:50%;
+        right:auto;
+        font-size:3rem;
+        display:none;
+        align-items:center;
+        justify-content:center;
+        opacity:0.3;
+        color:var(--primary-clr);
+        transform:translateY(-50%);
+
+}
+.events .event:hover::after{
+    display:flex;
+}
+.add-event-wrapper{
+    position:absolute;
+    bottom:100px;
+    left:50%;
+    width:90%;
+    max-height:0;
+    overflow:hidden;
+    border-radius:5px;
+    background-color:#fff;
+    transform:translateX(-50%);
+    transition:max-height 0.5s;
+}
+
+.add-event-wrapper.active{
+    max-height:300px;
+}
+.add-event-header{
+    width:100%;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    color:#373c4f;
+    border-bottom:1px solid #f5f5f5;
+}
+
+.add-event-header .close:hover{
+    color:var(--primary-clr);
+}
+
+.add-event-header .title{
+    font-size:1.2rem;
+            font-weight: 500;
+}
+
+.add-event-body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+
+}
+
+.add-event-body .add-event-input {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+}
+
+.add-event-body .add-event-input input {
+                width: 100%;
+                height: 100%;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #f5f5f5;
+                padding: 0 10px;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #373c4f;
+}
+
+.add-event-body .add-event-input input::placeholder {
+             color: #a5a5a5;
+}
+
+.add-event-body .add-event-input input:focus {
+             border-bottom: 1px solid var(--primary-clr);
+}
+
+.add-event-body .add-event-input input:focus::placeholder {
+             color: var(--primary-clr);
+}
+
+.add-event-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+}
+
+.add-event-btn {
+            height: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            outline: none;
+            border: none;
+            color: #fff;
+            background-color: var(--primary-clr);
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid var(--primary-clr);
+}
+
+.add-event-btn:hover {
+                background-color: transparent;
+                color: var(--primary-clr);
+}
+.add-event{
+    position:absolute;
+    bottom:30px;
+    right:30px;
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1rem;
+    color:#878895;
+    border:2px solid #878895;
+    opacity:inherit.5;
+    background-color:transparent;
+    cursor:pointer;
+}
+.add-event:hover{
+    opacity:1;
+}
+.add-event i{
+    pointer-events:none;
+}
+</style>                                  
