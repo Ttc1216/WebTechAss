@@ -18,21 +18,319 @@ namespace WebTech.Shared.Models
         {
         }
 
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Employer> Employer { get; set; }
+        public virtual DbSet<Employment> Employment { get; set; }
+        public virtual DbSet<EmploymentCourse> EmploymentCourse { get; set; }
+        public virtual DbSet<EmploymentTraining> EmploymentTraining { get; set; }
         public virtual DbSet<Language> Language { get; set; }
+        public virtual DbSet<Post> Post { get; set; }
+        public virtual DbSet<PostComment> PostComment { get; set; }
+        public virtual DbSet<PostMeta> PostMeta { get; set; }
         public virtual DbSet<Resource> Resource { get; set; }
         public virtual DbSet<ResourceAgeRange> ResourceAgeRange { get; set; }
         public virtual DbSet<ResourceAttachment> ResourceAttachment { get; set; }
         public virtual DbSet<ResourceCategory> ResourceCategory { get; set; }
+        public virtual DbSet<Tag> Tag { get; set; }
+        public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Scaffolding:ConnectionString", "Data Source=(local);Initial Catalog=autismDB;Integrated Security=true");
 
-            modelBuilder.Entity<Language>(entity =>
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.ToTable("category");
+
+                entity.HasIndex(e => e.ParentId, "idx_category_parent");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Content)
+                    .HasColumnType("text")
+                    .HasColumnName("content");
+
+                entity.Property(e => e.MetaTitle)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("metaTitle");
+
+                entity.Property(e => e.ParentId).HasColumnName("parentId");
+
+                entity.Property(e => e.Slug)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("slug");
+
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasMaxLength(75)
+                    .IsUnicode(false)
+                    .HasColumnName("title");
+
+                entity.HasOne(d => d.Parent)
+                    .WithMany(p => p.InverseParent)
+                    .HasForeignKey(d => d.ParentId)
+                    .HasConstraintName("fk_category_parent");
+            });
+
+            modelBuilder.Entity<Employer>(entity =>
+            {
+                entity.Property(e => e.Address).HasMaxLength(100);
+
+                entity.Property(e => e.Email).HasMaxLength(50);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.PhoneNumber).HasMaxLength(15);
+            });
+
+            modelBuilder.Entity<Employment>(entity =>
+            {
+                entity.Property(e => e.EmployerId).HasColumnName("EmployerID");
+
+                entity.Property(e => e.EmploymentCourseId).HasColumnName("EmploymentCourseID");
+
+                entity.Property(e => e.EmploymentTrainingId).HasColumnName("EmploymentTrainingID");
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .IsFixedLength();
+
+                entity.HasOne(d => d.Employer)
+                    .WithMany(p => p.Employment)
+                    .HasForeignKey(d => d.EmployerId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Employment_ToEmployer");
+
+                entity.HasOne(d => d.EmploymentCourse)
+                    .WithMany(p => p.Employment)
+                    .HasForeignKey(d => d.EmploymentCourseId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Employment_ToEmploymentCourse");
+
+                entity.HasOne(d => d.EmploymentTraining)
+                    .WithMany(p => p.Employment)
+                    .HasForeignKey(d => d.EmploymentTrainingId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Employment_ToEmploymentTraining");
+            });
+
+            modelBuilder.Entity<EmploymentCourse>(entity =>
             {
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<EmploymentTraining>(entity =>
+            {
+                entity.Property(e => e.EndDate).HasColumnType("date");
+
+                entity.Property(e => e.Location).HasMaxLength(100);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.StartDate).HasColumnType("date");
+            });
+
+            modelBuilder.Entity<Language>(entity =>
+            {
+                entity.Property(e => e.Chinese)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.English)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Malay)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<Post>(entity =>
+            {
+                entity.ToTable("post");
+
+                entity.HasIndex(e => e.ParentId, "idx_post_parent");
+
+                entity.HasIndex(e => e.AuthorId, "idx_post_user");
+
+                entity.HasIndex(e => e.Slug, "uq_slug")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.AuthorId).HasColumnName("authorId");
+
+                entity.Property(e => e.Content).HasColumnName("content");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("createdAt");
+
+                entity.Property(e => e.MetaTitle)
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("metaTitle");
+
+                entity.Property(e => e.ParentId).HasColumnName("parentId");
+
+                entity.Property(e => e.Published).HasColumnName("published");
+
+                entity.Property(e => e.PublishedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("publishedAt");
+
+                entity.Property(e => e.Slug)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("slug");
+
+                entity.Property(e => e.Summary).HasColumnName("summary");
+
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasMaxLength(75)
+                    .IsUnicode(false)
+                    .HasColumnName("title");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("updatedAt");
+
+                entity.HasOne(d => d.Author)
+                    .WithMany(p => p.Post)
+                    .HasForeignKey(d => d.AuthorId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_post_user");
+
+                entity.HasOne(d => d.Parent)
+                    .WithMany(p => p.InverseParent)
+                    .HasForeignKey(d => d.ParentId)
+                    .HasConstraintName("fk_post_parent");
+
+                entity.HasMany(d => d.Category)
+                    .WithMany(p => p.Post)
+                    .UsingEntity<Dictionary<string, object>>(
+                        "PostCategory",
+                        l => l.HasOne<Category>().WithMany().HasForeignKey("CategoryId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("fk_pc_category"),
+                        r => r.HasOne<Post>().WithMany().HasForeignKey("PostId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("fk_pc_post"),
+                        j =>
+                        {
+                            j.HasKey("PostId", "CategoryId");
+
+                            j.ToTable("post_category");
+
+                            j.HasIndex(new[] { "CategoryId" }, "idx_pc_category");
+
+                            j.HasIndex(new[] { "PostId" }, "idx_pc_post");
+
+                            j.IndexerProperty<long>("PostId").HasColumnName("postId");
+
+                            j.IndexerProperty<long>("CategoryId").HasColumnName("categoryId");
+                        });
+
+                entity.HasMany(d => d.Tag)
+                    .WithMany(p => p.Post)
+                    .UsingEntity<Dictionary<string, object>>(
+                        "PostTag",
+                        l => l.HasOne<Tag>().WithMany().HasForeignKey("TagId").HasConstraintName("FK_PostTag_Tag"),
+                        r => r.HasOne<Post>().WithMany().HasForeignKey("PostId").HasConstraintName("FK_PostTag_Post"),
+                        j =>
+                        {
+                            j.HasKey("PostId", "TagId");
+
+                            j.ToTable("PostTag");
+                        });
+            });
+
+            modelBuilder.Entity<PostComment>(entity =>
+            {
+                entity.ToTable("post_comment");
+
+                entity.HasIndex(e => e.ParentId, "idx_comment_parent");
+
+                entity.HasIndex(e => e.PostId, "idx_comment_post");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Content)
+                    .HasColumnType("text")
+                    .HasColumnName("content");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("createdAt");
+
+                entity.Property(e => e.ParentId).HasColumnName("parentId");
+
+                entity.Property(e => e.PostId).HasColumnName("postId");
+
+                entity.Property(e => e.Published).HasColumnName("published");
+
+                entity.Property(e => e.PublishedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("publishedAt");
+
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("title");
+
+                entity.HasOne(d => d.Parent)
+                    .WithMany(p => p.InverseParent)
+                    .HasForeignKey(d => d.ParentId)
+                    .HasConstraintName("fk_comment_parent");
+
+                entity.HasOne(d => d.Post)
+                    .WithMany(p => p.PostComment)
+                    .HasForeignKey(d => d.PostId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_comment_post");
+            });
+
+            modelBuilder.Entity<PostMeta>(entity =>
+            {
+                entity.ToTable("Post_Meta");
+
+                entity.HasIndex(e => e.PostId, "idx_meta_post");
+
+                entity.HasIndex(e => new { e.PostId, e.Key }, "uq_post_meta")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Content)
+                    .HasColumnType("text")
+                    .HasColumnName("content");
+
+                entity.Property(e => e.Key)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("key");
+
+                entity.Property(e => e.PostId).HasColumnName("postId");
+
+                entity.HasOne(d => d.Post)
+                    .WithMany(p => p.PostMeta)
+                    .HasForeignKey(d => d.PostId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_meta_post");
             });
 
             modelBuilder.Entity<Resource>(entity =>
@@ -80,6 +378,45 @@ namespace WebTech.Shared.Models
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<Tag>(entity =>
+            {
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.Property(e => e.Email)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FirstName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LastLogin).HasColumnType("datetime");
+
+                entity.Property(e => e.LastName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.MiddleName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Mobile)
+                    .HasMaxLength(15)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.PasswordHash)
+                    .IsRequired()
+                    .HasMaxLength(32)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.RegisteredAt).HasColumnType("datetime");
             });
 
             OnModelCreatingPartial(modelBuilder);

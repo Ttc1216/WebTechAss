@@ -14,6 +14,9 @@ namespace WebTech.Shared.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public string English { get; set; }
+        public string Chinese { get; set; }
+        public string Malay { get; set; }
 
         public virtual ICollection<ResourceAttachment> ResourceAttachment { get; set; }
     }

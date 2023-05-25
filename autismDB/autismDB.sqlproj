@@ -63,10 +63,18 @@
     <Build Include="ResourceCategory.sql" />
     <Build Include="Language.sql" />
     <Build Include="ResourceAttachment.sql" />
-    <Build Include="Employment.sql" />
     <Build Include="Employer.sql" />
     <Build Include="EmploymentTraining.sql" />
     <Build Include="EmploymentCourse.sql" />
+    <Build Include="User.sql" />
+    <Build Include="Post.sql" />
+    <Build Include="Employement.sql" />
+    <Build Include="Post_Meta.sql" />
+    <Build Include="post_comment.sql" />
+    <Build Include="category.sql" />
+    <Build Include="post_category.sql" />
+    <Build Include="Tag.sql" />
+    <Build Include="PostTag.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="autismDB.refactorlog" />

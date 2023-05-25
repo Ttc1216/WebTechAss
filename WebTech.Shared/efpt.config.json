@@ -15,7 +15,47 @@
    "SelectedToBeGenerated": 0,
    "Tables": [
       {
+         "Name": "[dbo].[category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmploymentCourse]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmploymentTraining]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Language]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[post]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[post_category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[post_comment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Post_Meta]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PostTag]",
          "ObjectType": 0
       },
       {
@@ -32,6 +72,14 @@
       },
       {
          "Name": "[dbo].[ResourceCategory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tag]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User]",
          "ObjectType": 0
       }
    ],
