@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[post] (
   [id] BIGINT IDENTITY(1,1) NOT NULL,
   [authorId] BIGINT NOT NULL,
-  [parentId] BIGINT NULL,
+  [parentId] BIGINT NOT NULL,
   [title] VARCHAR(75) NOT NULL,
   [metaTitle] VARCHAR(100) NULL,
   [slug] VARCHAR(100) NOT NULL,

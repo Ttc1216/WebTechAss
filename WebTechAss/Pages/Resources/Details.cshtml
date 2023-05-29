@@ -1,0 +1,37 @@
+﻿@page
+@model WebTechAss.Pages.Resources.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Resource</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Resource.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Resource.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Resource.ResourceAgeRange)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Resource.ResourceAgeRange.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Resource.ResourceCategory)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Resource.ResourceCategory.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Resource?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

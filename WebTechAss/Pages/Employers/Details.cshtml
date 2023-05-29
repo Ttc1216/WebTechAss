@@ -1,0 +1,101 @@
+﻿@page
+@model WebTechAss.Pages.Employers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #e9f2fe;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .row dt {
+        font-weight: bold;
+        color: #333;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .row dd {
+        margin-bottom: 10px;
+        margin-left: 0;
+        padding-left: 15px;
+        border-left: 1px solid #ced4da;
+    }
+
+    .back-link {
+        margin-top: 20px;
+        color: #007bff;
+    }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+</style>
+
+<div class="container">
+    <h1>Details</h1>
+
+    <div>
+        <h4>Employer</h4>
+        <hr />
+
+        <dl class="row">
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Employer.Name)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Employer.Name)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Employer.Address)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Employer.Address)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Employer.PhoneNumber)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Employer.PhoneNumber)
+            </dd>
+            <dt class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Employer.Email)
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model => model.Employer.Email)
+            </dd>
+        </dl>
+    </div>
+
+    <div class="text-center">
+        <a asp-page="./Edit" asp-route-id="@Model.Employer?.Id" class="btn btn-primary">Edit</a>
+        <a asp-page="./Delete" asp-route-id="@Model.Employer?.Id" class="btn btn-danger">Delete</a>
+    </div>
+
+    <div class="text-center mt-2">
+        <a asp-page="./Index" class="back-link">Back to List</a>
+    </div>
+</div>
