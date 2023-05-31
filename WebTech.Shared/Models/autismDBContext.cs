@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace WebTech.Shared.Models
 {
-    public partial class autismDBContext : DbContext
+    public partial class autismDBContext
     {
         public autismDBContext()
         {
@@ -36,6 +36,7 @@ namespace WebTech.Shared.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.HasAnnotation("Scaffolding:ConnectionString", "Data Source=(local);Initial Catalog=autismDB;Integrated Security=true");
 
             modelBuilder.Entity<Category>(entity =>
@@ -220,6 +221,7 @@ namespace WebTech.Shared.Models
                 entity.HasOne(d => d.Parent)
                     .WithMany(p => p.InverseParent)
                     .HasForeignKey(d => d.ParentId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_post_parent");
 
                 entity.HasMany(d => d.Category)
@@ -389,6 +391,10 @@ namespace WebTech.Shared.Models
 
             modelBuilder.Entity<User>(entity =>
             {
+                entity.Property(e => e.AspnetuserId)
+                    .HasMaxLength(450)
+                    .HasColumnName("aspnetuserID");
+
                 entity.Property(e => e.Email)
                     .HasMaxLength(50)
                     .IsUnicode(false);
@@ -411,10 +417,6 @@ namespace WebTech.Shared.Models
                     .HasMaxLength(15)
                     .IsUnicode(false);
 
-                entity.Property(e => e.PasswordHash)
-                    .IsRequired()
-                    .HasMaxLength(32)
-                    .IsUnicode(false);
 
                 entity.Property(e => e.RegisteredAt).HasColumnType("datetime");
             });

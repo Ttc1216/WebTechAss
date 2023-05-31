@@ -18,7 +18,7 @@ namespace WebTech.Shared.Models
 
         public long Id { get; set; }
         public long AuthorId { get; set; }
-        public long? ParentId { get; set; }
+        public long ParentId { get; set; }
         public string Title { get; set; }
         public string MetaTitle { get; set; }
         public string Slug { get; set; }

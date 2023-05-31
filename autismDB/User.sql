@@ -6,10 +6,11 @@
     [LastName] VARCHAR(50) NULL,
     [Mobile] VARCHAR(15) NULL,
     [Email] VARCHAR(50) NULL,
-    [PasswordHash] VARCHAR(32) NOT NULL,
     [RegisteredAt] DATETIME NOT NULL,
     [LastLogin] DATETIME NULL,
     [Intro] NVARCHAR(MAX) NULL,
     [Profile] NVARCHAR(MAX) NULL,
-    PRIMARY KEY ([Id]),
+    [aspnetuserID] NVARCHAR(450) NULL, 
+    PRIMARY KEY ([Id]), 
+    CONSTRAINT [FK_User_ToTable] FOREIGN KEY ([aspnetuserID]) REFERENCES [AspNetUsers]([ID]),
 )

@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace WebTech.Shared.Models
 {
-    public partial class autismDBContext
+    public partial class autismDBContext : IdentityDbContext<IdentityUser>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
