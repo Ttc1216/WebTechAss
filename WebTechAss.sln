@@ -9,7 +9,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "autismDB", "autismDB\autism
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "admin panel", "admin panel\admin panel.csproj", "{F4EBFE14-A288-48E4-922A-866AE9C0D34B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTech.Shared", "WebTech.Shared\WebTech.Shared.csproj", "{6F8B0CD2-B7E7-4D8C-9205-635393BBB753}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTech.Shared", "WebTech.Shared\WebTech.Shared.csproj", "{6F8B0CD2-B7E7-4D8C-9205-635393BBB753}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

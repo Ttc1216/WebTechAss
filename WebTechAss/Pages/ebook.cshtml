@@ -1,0 +1,187 @@
+﻿@page
+@model WebTechAss.Pages.ebbokModel
+@{
+}
+<body>
+    <div class="banner_section layout_padding">
+        <div class="container7">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="banner_taital">Unlocking the Power of Words: <br>Inspiring the Joy of Reading"</div>
+                    <p class="banner_text">Embrace the enchantment of reading and embark on a lifelong journey of exploration and growth. </p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br /><br />
+@*    <div class="wrapper">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+    *@
+    <div class="gallery" style="margin-left:130px">
+        <a target="_blank" href="https://www.amazon.com/dp/B07TF92Y3Z?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/41FNN-FYnRL._SL500_.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://www.amazon.com/dp/B08B3W19GD?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/41ozmJBeboS._SL500_.jpg" alt="Forest" width="600" height="400">
+        </a>
+        
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://www.amazon.com/dp/B00JRG3TJM?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/51X9blAj+iL.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="https://www.amazon.com/dp/B001ODEQS4?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/51HdvBHHaJL.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        
+    </div>
+    <br />
+    <div class="gallery" style="margin-left:130px; margin-right:560px">
+        <a target="_blank" href="https://www.amazon.com/dp/B072L7YX5G?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/51nHl1KOasL._SL500_.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="https://www.amazon.com/dp/B00BVJG3CS?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/61lkiZmMBvL._SL500_.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        
+    </div>
+    <div class="gallery" style="margin-left:130px;">
+        <a target="_blank" href="https://www.amazon.com/dp/B07R4Q3L51?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/41rT62bbi2L._SL500_.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="https://www.amazon.com/dp/B08FJGPRQQ?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/51jwctO+qNL._SL500_.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="https://www.amazon.com/dp/B085423432?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/41nDO+NBPWL.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="https://www.amazon.com/dp/B085NX84C4?tag=uuid10-20">
+            <img src="https://m.media-amazon.com/images/I/41i-qVCVcXL._SL500_.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <br />
+    </div>
+</body>
+
+<style>
+/*    body {
+        margin: 80px;
+    }*/
+body{
+    background-color:ghostwhite;
+}
+    .banner_section {
+        width: 100%;
+        float: left;
+        background: linear-gradient(110deg, #F5F5F5 55%, rgba(60, 90, 90, 0) 55%),url(../images/book2.jpeg);
+        background-repeat: no-repeat;
+/*        background-attachment: fixed;*/
+        background-position: right;
+        /*position: relative;*/
+        padding-bottom: 90px;
+        height:450px;
+    }
+
+    .banner_taital {
+        width: 85%;
+        float: left;
+        color: black;
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 70px;
+        padding-left:30px;
+        padding-top:100px;
+    }
+
+    .banner_text {
+        width: 85%;
+        float: left;
+        color: black;
+        font-size: 16px;
+        margin-left: 0px;
+        padding-left: 30px;
+    }
+
+
+    .box {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 200%;
+    }
+
+        .box:nth-child(even) {
+            background-color: #ccc;
+            color: #000;
+        }
+
+    .wrapper {
+        width: 770px;
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: repeat(6, 200px);
+        grid-template-rows: 200px 200px 200px;
+        grid-auto-flow: column;
+        margin-top:100px;
+        margin-left:150px;
+    }
+
+    div.gallery {
+        margin: 40px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+/*        margin-left:35px;*/
+        flex-direction:row;
+        align-content:space-between;
+    }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+    div.desc {
+        padding: 15px;
+        text-align: center;
+    }
+</style>

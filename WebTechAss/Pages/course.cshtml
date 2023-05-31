@@ -1,0 +1,367 @@
+﻿@page
+@model WebTechAss.Pages.courseModel
+@{
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+@*    <section class="main-content blog-posts flat-row course-grid">
+        <div class="container">
+            <div class="blog-title clearfix">
+                <h1 class="bold" style="margin-top:20px">ALL COURSES</h1>
+            </div>
+            <div class="row">
+                <div class="flat-post-ordering clearfix">
+                    <div class="sort-views" >
+                        <label class="modern-select">
+                            <select name="select_category" class="orderby">
+                                <option value="menu_order" selected="selected">Select Category</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="mobile_app">Mobile App</option>
+                                <option value="fashion_design">Fashion Desin</option>
+                                <option value="web_design">Web Design</option>
+                            </select>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+         </section>*@
+
+
+   <section id="popular-courses" class="courses">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2 style="margin-top:35px;font-family:serif;margin-bottom:50px;text-align:center;font-weight:bold;">
+                Popular Courses
+                </h2>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="course-item">
+                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/2b/c0b5c0d18711e8a30be3219f2133a9/School-Health-Logos-07.png?auto=format%2Ccompress&dpr=1" class="img-fluid" alt="..." style="width:100%;height:45%">
+                    <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            @*<h4>Managing ADHD, Autism, Learning Disabilities, and Concussion in School</h4>*@
+                                <p class="price">Free Online Course</p>
+                        </div>
+
+                            <h3><a href="https://www.classcentral.com/course/managing-adhd-autism-learning-disabiliti-12821/visit">Managing ADHD, Autism, Learning Disabilities, and Concussion in School</a></h3>
+                            <p> In this course, you will about the most common developmental and behavioral disorders affecting children such as ADHD, autism spectrum disorder, learning disorders, and concussions</p>
+                        <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/images/trainer-1.jpg" class="img-fluid" alt="">
+                                    <span>Lauren Welch</span>
+                            </div>
+                            <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;50
+                                &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;65
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Course Item-->
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                <div class="course-item">
+                        <img src="https://childhub.org/sites/default/files/styles/max_1300x1300/public/elearning/autism.PNG?itok=J29_Amig" class="img-fluid" alt="..." style="width:100%;height:45%">
+                    <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                               @* <h4>Good Practice in Autism Education</h4>*@
+                                <p class="price">Free Online Course</p>
+                        </div>
+
+                            <h3><a href="https://www.classcentral.com/course/autism-education-11585/visit">Good Practice in Autism Education</a></h3>
+                            <p>This 4-week course tackles crucial questions about autism education to ensure that 
+                                children on the autism spectrum are educated to their greatest potential.</p>
+                        <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/images/trainer-2.jpg" class="img-fluid" alt="">
+                                    <span>Mark Brosnan</span>
+                            </div>
+                            <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;35
+                                &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;42
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Course Item-->
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="course-item">
+                        <img src="https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image_variant/ffe43ab58076_w240.webp" class="img-fluid" alt="..." style="width:100%;height:45%">
+                    <div class="course-content">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                               @* <h4>Attention and Autism</h4>*@
+                                <p class="price">Free Online Course</p>
+                        </div>
+
+                            <h3><a href="https://www.classcentral.com/course/attention-and-autism-97280/visit">Attention and Autism</a></h3>
+                            <p>Build strategies to meet the needs of children with autism.
+                                Research has shown that adapting strategies to meet the needs of autistic children can benefit all children in a classroom.
+                            </p>
+                        <div class="trainer d-flex justify-content-between align-items-center">
+                            <div class="trainer-profile d-flex align-items-center">
+                                <img src="~/images/trainer-3.jpg" class="img-fluid" alt="">
+                                    <span>Lila Kossyvaki</span>
+                            </div>
+                            <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;20
+                                &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;85
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Course Item-->
+            <br />
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="course-item" style="margin-top:30px">
+                        <img src="https://img-b.udemycdn.com/course/750x422/328928_bf1d_2.jpg" class="img-fluid" alt="..." style="width:100%;height:45% ">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                @*<h4>Autism Awareness Course for Parents - Autism Training</h4>*@
+                                <p class="price">RM169.90</p>
+                            </div>
+
+                            <h3><a href="https://www.udemy.com/course/understanding-autism/">Autism Awareness Course for Parents - Autism Training</a></h3>
+                            <p>Training Helps Parents Reduce Challenging Autism Behavior Learn to Understand & Manage Autism and Autistic Children</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="https://img-b.udemycdn.com/user/200_H/4221944_78c3_12.jpg" class="img-fluid" alt="">
+                                    <span>Brian Cliette</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;50
+                                    &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;65
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="course-item" style="margin-top:30px">
+                        <img src="https://www.goodtherapy.org/admin/includes/ckfinder/userfiles/images/boy-coloring-with-therapist.jpg" class="img-fluid" alt="..." style="width:100%;height:45%">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                @*<h4>Applied Behavioural Analysis (ABA)</h4>*@
+                                <p class="price">RM134.90</p>
+                            </div>
+
+                            <h3><a href="https://www.udemy.com/course/instructions-to-applied-behavioral-analysis-aba/">Applied Behavioural Analysis (ABA)</a></h3>
+                            <p>
+                                An Introduction to Skills Training for Practitioners
+                            </p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="https://img-b.udemycdn.com/user/200_H/37969628_3608.jpg" class="img-fluid" alt="">
+                                    <span>Liau Whatt Meng</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;35
+                                    &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;42
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item" style="margin-top:30px">
+                        <img src="https://img-b.udemycdn.com/course/750x422/2887362_75d3_2.jpg" class="img-fluid" alt="..." style="width:100%;height:45%">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                @*<h4>Understanding Basics: Autism 101</h4>*@
+                                <p class="price">RM79.90</p>
+                            </div>
+
+                            <h3><a href="https://www.classcentral.com/course/attention-and-autism-97280/visit">Understanding Basics: Autism 101</a></h3>
+                            <p>
+                                Autism Spectrum Disorder: Signs & Symptoms -- Diagnosis -- Treatment Options -- Continuous Progress
+
+                            </p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="https://img-b.udemycdn.com/user/200_H/106470480_4e92.jpg" class="img-fluid" alt="">
+                                    <span>Nikhat Bedi</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;20
+                                    &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;85
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Course Item-->
+                <br />
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="course-item" style="margin-top:30px">
+                        <img src="https://img-c.udemycdn.com/course/750x422/3911000_4cdc_2.jpg" class="img-fluid" alt="..." style="width:100%;height:50% ">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                               @* <h4>Autism at Work - Managing Autism in The Workplace</h4>*@
+                                <p class="price">RRM79.90</p>
+                            </div>
+
+                            <h3><a href="https://www.udemy.com/course/autism-at-work-managing-autism-in-the-workplace/">Autism at Work - Managing Autism in The Workplace</a></h3>
+                            <p>Getting the most out of autistic employees and helping everyone to thrive.</p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="https://img-b.udemycdn.com/user/200_H/143172468_a493.jpg" class="img-fluid" alt="">
+                                    <span>Timonthy Sproule</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;50
+                                    &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;65
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="course-item" style="margin-top:30px">
+                        <img src="https://ihssdenial.com/wp-content/uploads/2018/02/4308adbe-4fed-11e6-8d8d-a42edc5c5383.jpg" class="img-fluid" alt="..." style="width:100%;height:50%">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                @*<h4>Autism Spectrum Disorder (ASD) The Facts for Parents</h4>*@
+                                <p class="price">RM69.90</p>
+                            </div>
+
+                            <h3><a href="https://www.udemy.com/course/autism-spectrum-disorder-asd-the-facts-for-parents/">Autism Spectrum Disorder (ASD) The Facts for Parents</a></h3>
+                            <p>
+                                Autism Spectrum Disorder (ASD) The Facts for Parents
+                            </p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="https://img-b.udemycdn.com/user/200_H/19364906_9a00.jpg" class="img-fluid" alt="">
+                                    <span>Randa Habelrih</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;35
+                                    &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;42
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Course Item-->
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item" style="margin-top:30px">
+                        <img src="https://img-c.udemycdn.com/course/240x135/4021232_f670.jpg" class="img-fluid" alt="..." style="width:100%;height:50%">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                @*<h4>How to Create an Autism Friendly Space</h4>*@
+                                <p class="price">RM79.90</p>
+                            </div>
+
+                            <h3><a href="https://www.udemy.com/course/how-to-create-an-autism-friendly-space/">How to Create an Autism Friendly Space</a></h3>
+                            <p>
+                                Making your home, work, school or other space more freindly to people with autism
+
+                            </p>
+                            <div class="trainer d-flex justify-content-between align-items-center">
+                                <div class="trainer-profile d-flex align-items-center">
+                                    <img src="https://img-b.udemycdn.com/user/200_H/106470480_4e92.jpg" class="img-fluid" alt="">
+                                    <span>Timonthy Sproule</span>
+                                </div>
+                                <div class="trainer-rank d-flex align-items-center">
+                                    <i class="fa-regular fa-user"></i>&nbsp;20
+                                    &nbsp;&nbsp;
+                                    <i class="fa-regular fa-heart"></i>&nbsp;85
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Course Item-->
+        </div>
+
+    </div>
+</section><!-- End Popular Courses Section -->
+</body>
+
+<style>
+body{
+        background-color: #F3F4FF;
+}
+    .courses .course-item {
+        border-radius: 5px;
+        border: 1px solid #E4EEF4;
+        background-color:ghostwhite;
+    }
+.course .course-item img{
+    width:100%;
+}
+    .courses .course-content {
+        padding: 15px;
+    }
+
+        .courses .course-content h3 {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+            .courses .course-content h3 a {
+                color: #37423b;
+                transition: 0.3s;
+            }
+
+                .courses .course-content h3 a:hover {
+                }
+
+        .courses .course-content p {
+            font-size: 14px;
+            color: #777777;
+        }
+
+        .courses .course-content h4 {
+            font-size: 14px;
+            background: #5fcf80;
+            padding: 7px 14px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .courses .course-content .price {
+            margin: 0;
+            font-weight: 700;
+            font-size: 18px;
+            color: #37423b;
+        }
+
+    .courses .trainer {
+        padding-top: 15px;
+        border-top: 1px solid #DFE0E7;
+    }
+
+        .courses .trainer .trainer-profile img {
+            max-width: 50px;
+            border-radius: 50px;
+        }
+
+        .courses .trainer .trainer-profile span {
+            padding-left: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #5a6c60;
+        }
+
+        .courses .trainer .trainer-rank {
+            font-size: 18px;
+            color: #657a6d;
+        }
+
+ </style>

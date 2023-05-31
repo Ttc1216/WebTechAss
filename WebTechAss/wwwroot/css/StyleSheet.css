@@ -46,15 +46,15 @@ header {
     padding-top: 10px;
 }
 .navbar{
-    margin-left:80px;
+    margin-left:100px;
 }
 .navbar a {
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     color: #191919;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 20px;
+    font-weight: 300;
+    margin-left: 15px;
     /*    float:right;*/
 }
 
@@ -83,10 +83,10 @@ header {
         display: block;
         font-size:small;
         position: absolute;
-        left: 20px;
+        left: 15px;
         top: calc(100% + 30px);
         margin: 0;
-        padding: 10px 0;
+        padding: 7px 0;
         z-index: 99;
         opacity: 0;
         visibility: hidden;
@@ -96,13 +96,13 @@ header {
 }
 
 .navbar .dropdown ul li {
-            min-width: 200px;
-            padding:10px 0px;
+            min-width: 160px;
+            padding:7px 0px;
 }
 
 .navbar .dropdown ul a {
             padding: 10px 20px;
-            font-weight: 300;
+            font-weight: 200;
 }
 
  .navbar .dropdown ul a i {

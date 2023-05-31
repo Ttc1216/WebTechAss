@@ -55,7 +55,7 @@
    <header>
        <h2 class="logo">MARF</h2>
        <nav id="navbar" class="navbar" style="width:100%">
-          <a href="Index">Home</a>
+          <a href="index">Home</a>
           @*<a href="About">About us</a>*@
           <div class="dropdown"><a href="About">About us<i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -73,8 +73,17 @@
           </div>
           <a href="Blog">Blog</a>
           <a href="FAQ">FAQ</a>
-          <a href="Resource">Resource</a>
-          <a href="Login">Login/Register</a>
+            <div class="dropdown">
+                <a href="Resource">Resource<i class="bi bi-chevron-down"></i></a>
+                <ul>
+                    @*<li><a href="#">Staff</a></li>*@
+                    <li><a href="ebook">E-book</a></li>
+                    <li><a href="employment">Employment</a></li>
+                    <li><a href="course">Course</a></li>
+                    </ul>
+                </div>
+          
+          <a href="Login">Login</a>
           <button class="button"><a href="donate">Donate</a></button>
           </nav><!-- .navbar -->
   </header><!-- End Header -->
@@ -180,7 +189,7 @@
     </div>
 </footer>*@
     <div class="background">
-    <div class="container">
+    <div class="container100">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

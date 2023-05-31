@@ -161,7 +161,7 @@ body.dark .nav-links li a:hover .link-name {
 
 .menu-items .mode-toggle {
     position: absolute;
-    right: 14px;
+    right: 24px;
     height: 50px;
     min-width: 45px;
     display: flex;
