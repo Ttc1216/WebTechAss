@@ -26,16 +26,18 @@
 <body>
     <nav>
         <div class="logo-name">
-        <div class="logo-image">
-            <h2>MARF</h2>
-        </div>
+            <div class="logo-image">
+                <h2>MARF</h2>
+            </div>
         </div>
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
-                  <i class="fa-sharp fa-solid fa-house"></i>
-                  <span class="link-name">Dashsboard</span>
-                </a></li>
+                <li>
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Dashsboard</span>
+                    </a>
+                </li>
                 <li>
                     <a href="blog">
                         <i class="fa-solid fa-tags"></i>
@@ -75,10 +77,12 @@
             </ul>
 
             <ul class="logout-mode">
-                <li><a href="#">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span class="link-name">Logout</span>
-                </a></li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
 
                 <li class="mode">
                     <a href="#">
@@ -87,7 +91,7 @@
                     </a>
 
                     <div class="mode-toggle">
-                    <span class="switch"></span>
+                        <span class="switch"></span>
                     </div>
                 </li>
             </ul>
@@ -98,12 +102,12 @@
         <div class="top">
             <i class="fa-solid fa-bars sidebar-toggle"></i>
 
-                <div class="search-box">
+            <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search here..." />
-                </div>
-          <img src="~/image/images.jpg" alt="" />  
-        </div> 
+                <input type="text" placeholder="Search here..." />
+            </div>
+            <img src="~/image/images.jpg" alt="" />
+        </div>
 
         <div class="dash-content">
             <div class="overview">
@@ -165,8 +169,8 @@
                         <span class="data-title">Joined</span>
                         <span class="data-list">2020-01-01</span>
                         <span class="data-list">2020-01-01</span>
-                         <span class="data-list">2020-01-01</span>
-                          <span class="data-list">2020-01-01</span>
+                        <span class="data-list">2020-01-01</span>
+                        <span class="data-list">2020-01-01</span>
                         <span class="data-list">2020-01-01</span>
                     </div>
                     <div class="data status">
@@ -181,56 +185,56 @@
             </div>
             <br /><br />
             <div>
-            <canvas id="myChart" style="width:850px;max-width:1000px; display:block; height:300px;"></canvas>
-            <h3 ></h3>
-            <script>
-                //const xValues = [Jan, Feb, Mar, Apl, May, June, July, Aug, Sept, Oct, Nov, Dec];
-                const xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-                const yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15, 15];
+                <canvas id="myChart" style="width:850px;max-width:1000px; display:block; height:300px;"></canvas>
+                <h3></h3>
+                <script>
+                    //const xValues = [Jan, Feb, Mar, Apl, May, June, July, Aug, Sept, Oct, Nov, Dec];
+                    const xValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+                    const yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15, 15];
 
-                new Chart("myChart", {
-                    type: "line",
-                    data: {
-                        labels: xValues,
-                        datasets: [{
-                            fill: false,
-                            lineTension: 0,
-                            backgroundColor: "rgba(0,0,255,1.0)",
-                            borderColor: "rgba(0,0,255,0.1)",
-                            data: yValues
-                        }]
-                    },
-                    options: {
-                        legend: { display: false },
-                        scales: {
-                            yAxes: [{ ticks: { min: 6, max: 16 } }],
+                    new Chart("myChart", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                fill: false,
+                                lineTension: 0,
+                                backgroundColor: "rgba(0,0,255,1.0)",
+                                borderColor: "rgba(0,0,255,0.1)",
+                                data: yValues
+                            }]
+                        },
+                        options: {
+                            legend: { display: false },
+                            scales: {
+                                yAxes: [{ ticks: { min: 6, max: 16 } }],
+                            }
                         }
-                    }
-                });
-            </script>
+                    });
+                </script>
             </div>
-@*            <div id="myPlot" style="width:850px;max-width:1000px"></div>
+            @*            <div id="myPlot" style="width:850px;max-width:1000px"></div>
 
             <script>
-                const xArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-                const yArray = [700, 800, 800, 900, 900, 900, 1000, 1100, 1400, 1400, 1500, 700];
+            const xArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+            const yArray = [700, 800, 800, 900, 900, 900, 1000, 1100, 1400, 1400, 1500, 700];
 
-                // Define Data
-                const data = [{
-                    x: xArray,
-                    y: yArray,
-                    mode: "lines"
-                }];
+            // Define Data
+            const data = [{
+            x: xArray,
+            y: yArray,
+            mode: "lines"
+            }];
 
-                // Define Layout
-                const layout = {
-                    xaxis: { range: [1, 12], title: "Month" },
-                    yaxis: { range: [500, 1500], title: "Donation" },
-                    title: "Amount"
-                };
+            // Define Layout
+            const layout = {
+            xaxis: { range: [1, 12], title: "Month" },
+            yaxis: { range: [500, 1500], title: "Donation" },
+            title: "Amount"
+            };
 
-                // Display using Plotly
-                Plotly.newPlot("myPlot", data, layout);
+            // Display using Plotly
+            Plotly.newPlot("myPlot", data, layout);
             </script>*@
 
 
@@ -240,5 +244,3 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
-
-
