@@ -54,8 +54,14 @@
 <body>
    <header>
        <h2 class="logo">MARF</h2>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
        <nav id="navbar" class="navbar" style="width:100%">
-          <a href="index">Home</a>
+           <a href="index" class="active">Home</a>
+          
           @*<a href="About">About us</a>*@
           <div class="dropdown"><a href="About">About us<i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -71,8 +77,8 @@
               <li><a href="internship">Internship</a></li>
             </ul>
           </div>
-          <a href="Blog">Blog</a>
-          <a href="FAQ">FAQ</a>
+            <a href="Blog">Blog</a>
+            <a href="FAQ">FAQ</a>
             <div class="dropdown">
                 <a href="Resource">Resource<i class="bi bi-chevron-down"></i></a>
                 <ul>
@@ -82,12 +88,14 @@
                     <li><a href="course">Course</a></li>
                     </ul>
                 </div>
-          
-          <a href="Login">Login</a>
+
+            <a href="Login">Login</a>
           <button class="button"><a href="donate">Donate</a></button>
           </nav><!-- .navbar -->
-  </header><!-- End Header -->
-@*
+  </header>
+
+  <!-- End Header -->
+@* 
           <nav id="navbar" class="navbar" style="width:100%">
         <ul>
           <li><a href="Index">Home</a></li>
