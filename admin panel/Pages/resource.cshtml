@@ -2,3 +2,213 @@
 @model admin_panel.Pages.resourceModel
 @{
 }
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="StyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+            integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Admin Dashboard Panel</title>
+
+
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <h2>MARF</h2>
+            </div>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="index">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Dashsboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog">
+                        <i class="fa-solid fa-tags"></i>
+                        <span class="link-name">Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resource">
+                        <i class="fa-solid fa-file"></i>
+                        <span class="link-name">Resource</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employment">
+                        <i class="fa-sharp fa-solid fa-person"></i>
+                        <span class="link-name">Employment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-book"></i>
+                        <span class="link-name">Ebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="link-name">Comment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="setting">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Setting</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <span class="link-name">Dark mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here..." />
+            </div>
+            <img src="~/image/images.jpg" alt="" />
+        </div>
+
+        <div class="resource-block" style="margin-top:55px">
+            <h3>Young Child</h3>
+            <ul class="resources">
+                <li>Resource #1<span>></span></li>
+                <li>Resource #2<span>></span></li>
+                <li>Resource #3<span>></span></li>
+            </ul>
+        </div>
+
+        <!--DUPLICATES-->
+
+        <div class="resource-block" style="margin-top:55px">
+            <h3>School age</h3>
+            <ul class="resources">
+                <li>Resource #1<span>></span></li>
+                <li>Resource #2<span>></span></li>
+                <li>Resource #3<span>></span></li>
+            </ul>
+        </div>
+        <div class="resource-block">
+            <h3>Young Adult</h3>
+            <ul class="resources">
+                <li>Resource #1<span>></span></li>
+                <li>Resource #2<span>></span></li>
+                <li>Resource #3<span>></span></li>
+            </ul>
+        </div>
+        <div class="resource-block">
+            <h3>Adult</h3>
+            <ul class="resources">
+                <li>Resource #1<span>></span></li>
+                <li>Resource #2<span>></span></li>
+                <li>Resource #3<span>></span></li>
+            </ul>
+        </div>
+
+    </section>
+
+</body>
+
+<style>
+    html {
+        box-sizing: border-box;
+    }
+
+    * {
+        box-sizing: inherit;
+        transition-duration: 0.25s;
+    }
+
+    body {
+        padding: 2rem;
+        background: var(--panel-color);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .resource-block {
+        border: 1px solid #ddd;
+        width: 40%;
+        margin-right: 5%;
+        border-radius: 4px;
+        padding: 1rem;
+        border-bottom: 4px solid #e03633;
+        float: left;
+        margin-bottom: 2rem;
+        background: #fff;
+    }
+
+        .resource-block:nth-of-type(3n) {
+            margin-right: 0;
+        }
+
+        .resource-block:nth-of-type(3n+1) {
+            clear: both;
+        }
+
+        .resource-block span {
+            color: #e03633;
+            float: right;
+            display: none;
+        }
+
+    ul.resources {
+        list-style: none;
+        padding: 0;
+    }
+
+        ul.resources li {
+            border-bottom: 1px solid #ddd;
+            padding: 0.25rem;
+        }
+
+            ul.resources li:hover {
+                background: #eee;
+            }
+
+                ul.resources li:hover span {
+                    display: inline-block;
+                }
+</style>
