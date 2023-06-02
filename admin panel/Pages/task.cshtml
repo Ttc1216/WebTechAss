@@ -1,0 +1,226 @@
+﻿@page
+@model admin_panel.Pages.taskModel
+@{
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="StyleSheet.css">
+    <link rel="stylesheet" href="~/js/site.js" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+            integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous" />
+    <title>Admin Dashboard Panel</title>
+
+
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <h2>MARF</h2>
+            </div>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="index">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Dashsboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog">
+                        <i class="fa-solid fa-tags"></i>
+                        <span class="link-name">Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resource">
+                        <i class="fa-solid fa-file"></i>
+                        <span class="link-name">Resource</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employment">
+                        <i class="fa-sharp fa-solid fa-person"></i>
+                        <span class="link-name">Employment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-book"></i>
+                        <span class="link-name">Ebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="link-name">Comment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="setting">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Setting</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <span class="link-name">Dark mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here..." />
+            </div>
+            <img src="~/image/images.jpg" alt="" />
+        </div>
+        <div class="app-container"
+             ng-app="myApp"
+             ng-controller="myController">
+            {{ task_name }}
+            <h3>To do List</h3>
+            <div class="d-flex align-items-center mb-3">
+                <div class="form-group mr-3 mb-0">
+                    <input ng-model="yourTask"
+                           type="text"
+                           class="form-control"
+                           id="formGroupExampleInput"
+                           placeholder="Enter a task here" />
+                </div>
+                <button type="button"
+                        class="btn btn-primary mr-3"
+                        ng-click="saveTask()">
+                    Save
+                </button>
+                <button type="button" class="btn btn-warning" ng-click="getTask()">
+                    Get Tasks
+                </button>
+            </div>
+            {{ yourName }}
+            <div class="table-wrapper">
+                <table class="table table-hover table-bordered">
+                    <thead style="color: var(--text-color)">
+                        <tr>
+                            <th style="width:20px">No.</th>
+                            <th>Todo item</th>
+                            <th>status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: var(--text-color)">
+                        <tr ng-repeat="task in tasks"
+                            class="{{ task.status ? 'table-success' : 'table-light' }}">
+                            <td style="width:20px">{{ $index + 1 }}</td>
+                            <td class="{{ task.status ? 'complete' : 'task' }}">
+                                {{ task.task_name }}
+                            </td>
+                            <td>{{ task.status ? "Completed" : "In progress" }}</td>
+                            <td>
+                                <button class="btn btn-danger" ng-click="delete($index)">
+                                    Delete
+                                </button>
+                                <button class="btn btn-success" ng-click="finished($index)">
+                                    Finished
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myController", function ($scope) {
+                $scope.tasks = [];
+                // $scope.saved = localStorage.getItem("tasks");
+                // $scope.tasks =
+                //   localStorage.getItem("tasks") !== null
+                //     ? JSON.parse($scope.saved)
+                //     : [
+                //         { task_name: "Learn AngularJS", status: false },
+                //         { task_name: "Build an Angular app", status: false }
+                //       ];
+                // localStorage.setItem("tasks", JSON.stringify($scope.tasks));
+                $scope.saveTask = function () {
+                    $scope.tasks.push({ task_name: $scope.yourTask, status: false });
+                    //   localStorage.setItem("tasks", JSON.stringify($scope.tasks));
+                };
+                $scope.getTask = function () {
+                    var oldTasks = $scope.tasks;
+                    $scope.tasks = [];
+                    angular.forEach(oldTasks, function (task) {
+                        if (!task.done) $scope.tasks.push(task);
+                    });
+                    localStorage.setItem("tasks", JSON.stringify($scope.tasks));
+                };
+                $scope.delete = function (i) {
+                    $scope.tasks.splice(i, 1);
+                };
+                $scope.finished = function (i) {
+                    $scope.tasks[i].status = true;
+                };
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+        
+    </section>
+    </body>
+
+<style>
+    .app-container {
+        height: 80vh;
+        width: 100%;
+        margin-top:100px;
+        color: var(--text-color);
+    }
+
+    .complete {
+        text-decoration: line-through;
+    }
+</style>

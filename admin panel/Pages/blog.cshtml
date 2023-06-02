@@ -2,3 +2,182 @@
 @model admin_panel.Pages.blogModel
 @{
 }
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="StyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+            integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Admin Dashboard Panel</title>
+
+
+
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <h2>MARF</h2>
+            </div>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li>
+                    <a href="index">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Dashsboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog">
+                        <i class="fa-solid fa-tags"></i>
+                        <span class="link-name">Blog</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="resource">
+                        <i class="fa-solid fa-file"></i>
+                        <span class="link-name">Resource</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employment">
+                        <i class="fa-sharp fa-solid fa-person"></i>
+                        <span class="link-name">Employment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-book"></i>
+                        <span class="link-name">Ebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="comment">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="link-name">Comment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="setting">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                        <span class="link-name">Setting</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <span class="link-name">Dark mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here..." />
+            </div>
+            <img src="~/image/images.jpg" alt="" />
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-6 " style="width:100%">
+                    <h4 style="margin-top:35px;color: var(--text-color)">Latest Post</h4>
+                    <ul class="timeline">
+                        <li>
+                            <a target="_blank" href="https://www.healthline.com/health/autism/fears-of-autism-parent?utm_source=ReadNext">7 Fears Autism Parents Will Understand</a>
+                            <a href="#" class="float-right">April 12, 2018</a>
+                            <p>Health and wellness touch each of us differently. This is one person’s story.</p>
+                        </li>
+                        <li>
+                            <a href="#">When My Autistic Son Melts Down, Here’s What I Do</a>
+                            <a href="#" class="float-right">May 19, 2023</a>
+                            <p>One mom shares her story and how she uses empathy and compassion to help her autistic child through meltdowns and other tough times.</p>
+                        </li>
+                        <li>
+                            <a href="#">One mom shares her story and how she uses empathy and compassion to help her autistic child through meltdowns and other tough times.</a>
+                            <a href="#" class="float-right">February 12, 2019</a>
+                            <p>A recent study found evidence it could help, but many experts are skeptical.</p>
+                        </li>
+                        <li>
+                            <a href="http://www.theautismdad.com/blog/">Broken Plant</a>
+                            <a href="#" class="float-right">jan 15, 2019</a>
+                            <p>The truth about Autism and Special Needs Parenting.</p>
+                        </li>
+                        <li>
+                            <a href="#">A Hilarious and Inspiring Conversation with Tara Reynolds and Lauren Flack</a>
+                            <a href="#" class="float-right">May 22 ,2023</a>
+                            <p>My conversation with Tara Reynolds and Lauren Flack</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<style>
+    ul.timeline {
+        list-style-type: none;
+        position: relative;
+    }
+
+        ul.timeline:before {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 0;
+        }
+
+        ul.timeline > li {
+            margin: 20px 0;
+            padding-left: 20px;
+            color: var(--text-color);
+        }
+
+            ul.timeline > li:before {
+                content: ' ';
+                background: white;
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                border: 3px solid #22c0e8;
+                left: 20px;
+                width: 20px;
+                height: 20px;
+                z-index: 0;
+            }
+</style>
